@@ -1,0 +1,144 @@
+.footer {
+  color: $light;
+  background: $dark;
+  padding: 71px 0px 158px;
+  @include media(540) {
+    padding-top: 51px;
+    padding-bottom: 117px;
+  }
+  &__container {
+    @include media(1200) {
+      padding-left: 10%;
+    }
+    @include media(767) {
+      padding: 0px 41px;
+    }
+  }
+  &__inner {
+    display: flex;
+    @include media(1640) {
+      justify-content: space-between;
+      @include gap(column, 20px);
+    }
+    @include media(1200) {
+      flex-wrap: wrap;
+    }
+  }
+  &__left {
+    margin-right: 60px;
+    @include media(1640) {
+      margin-right: 0;
+    }
+    @include media(1200) {
+      margin-bottom: 89px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  &__logo {
+    img {
+      @include size(97, 38);
+    }
+  }
+  &__sub-title {
+    margin-top: 33px;
+    text-transform: uppercase;
+    max-width: 360px;
+    @include media(1200) {
+      text-align: center;
+    }
+    @include media(540) {
+      font-size: 16px;
+    }
+  }
+  $gap: 16px;
+  &__list {
+    column-count: 2;
+    width: 100%;
+    max-width: 542px;
+    margin-bottom: -$gap;
+    @include media(1200) {
+      margin-bottom: 89px;
+    }
+    @include media(540) {
+      column-count: 1;
+    }
+  }
+  &__link {
+    display: block;
+    margin-bottom: $gap;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    a {
+      @include font-settings(14, 17);
+      text-transform: uppercase;
+      font-weight: 700;
+      @include hover {
+        color: $primary;
+      }
+      &:focus {
+        color: $primary;
+      }
+    }
+  }
+  &__right {
+    margin-left: auto;
+    margin-right: 227px;
+    @include media(1640) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  &__left,
+  &__list {
+    @include media(540) {
+      margin-bottom: 33px;
+    }
+  }
+  &__address-item {
+    display: flex;
+    align-items: flex-start;
+    @include gap(column, 20px);
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      @include media(540) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  &__icon {
+    color: $primary;
+  }
+  &__text {
+    @include font-settings(18, 22);
+    max-width: 307px;
+    @include media(540) {
+      font-size: 14px;
+      max-width: 208px;
+    }
+  }
+  &__phone {
+    max-width: none;
+    @include media(540) {
+      font-size: 16px;
+    }
+    @include hover {
+      color: $primary;
+    }
+    &:focus {
+      color: $primary;
+    }
+  }
+  &__social {
+    margin-top: 26px;
+    margin-left: 33px;
+  }
+  &__icon-wrapper {
+    @include size(18, 18);
+  }
+}

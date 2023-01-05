@@ -1,12 +1,30 @@
 body {
-  font-size: 14px;
-  line-height: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  @include media(767) {
+    font-size: 12px;
+  }
+}
+
+a, span, p, button, strong, b, li, input, textarea {
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
 }
 
 .container {
-  width: 100% !important;
-  padding-left: 16px;
-  padding-right: 16px;
+  $desctop-padding: 44px;
+  max-width: 1642px + ($desctop-padding * 2);
+  padding-left: $desctop-padding;
+  padding-right: $desctop-padding;
+  margin-left: auto;
+  margin-right: auto;
+  @include min-media(767) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .content {
@@ -97,71 +115,36 @@ h1, h2, h3, h4, h4, h6, .h1-title, .h2-title, .h3-title, .h4-title, .h5-title, .
 }
 
 h1, .h1-title {
-  @include css-lock(40, 48, 480, 1920);
-  line-height: 44px;
+  @include font-settings(64, 76);
   @include min-media(1200) {
-    line-height: 52px;
+    font-size: 43px;
   }
 }
 
 h2, .h2-title {
-  @include css-lock(30, 32, 480, 1920);
-  line-height: 34px;
+  @include font-settings(48, 57);
   @include min-media(1200) {
-    line-height: 44px;
+    font-size: 40px;
+  }
+  @include media(767) {
+    font-size: 24px;
   }
 }
 
 h3, .h3-title {
-  @include css-lock(24, 32, 480, 1920);
-  line-height: 1;
-  @include min-media(1200) {
-    line-height: 1.4;
+  @include font-settings(36, 43);
+  @include media(767) {
+    font-size: 24px;
   }
 }
 
-h4, .h4-title {
-  @include css-lock(20, 24, 480, 1920);
-  line-height: 26px;
-  @include min-media(1200) {
-    line-height: 28px;
+h4, h5, h6 .h4-title, .h5-title, .h6-title  {
+  @include font-settings(24, 28);
+  @include media(1200) {
+    font-size: 20px;
   }
 }
 
-h5, .h5-title {
-  @include css-lock(16, 20, 480, 1920);
-  line-height: 22px;
-  @include min-media(1200) {
-    line-height: 24px;
-  }
-}
-
-h6, .h6-title {
-  @include css-lock(14, 16, 480, 1920);
-  line-height: 20px;
-}
-
-.subtitle-large__mod {
-  font-size: 16px;
-  line-height: 1.3;
-}
-
-.subtitle-medium__mod {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.subtitle-small__mod {
-  font-size: 13px;
-  line-height: 16px;
-}
-
-.subtitle-large__mod,
-.subtitle-medium__mod,
-.subtitle-small__mod {
-  display: block;
-  //@include fm;
-}
 
 .wrapper {
   display: flex;

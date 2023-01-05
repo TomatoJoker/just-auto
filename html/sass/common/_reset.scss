@@ -5,13 +5,13 @@
 }
 body {
   margin: 0;
-  background-color: $light;
+  background-color: $body-background;
   text-rendering: optimizeLegibility;
   text-decoration-skip: objects;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  min-width: 320px;
+  min-width: 280px;
   overflow-x: hidden;
 }
 html {
@@ -143,6 +143,9 @@ button {
   outline: none;
   border: none;
   box-shadow: none;
+  padding: 0;
+  border: 0;
+  background-color: $transparent;
 }
 p, span, label, h1, h2, h3, h4, h5, h6, b, strong, i, em {
   max-width: 100%;
@@ -171,4 +174,8 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+}
+
+address {
+  font-style: normal;
 }

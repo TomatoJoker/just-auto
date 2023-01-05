@@ -1,0 +1,11 @@
+.hero {
+  &__title {
+    @include font-settings(96, 114);
+    @include min-media(1200) {
+      @include font-settings(64, 76);
+    }
+    @include min-media(767) {
+      @include font-settings(24, 28);
+    }
+  }
+}

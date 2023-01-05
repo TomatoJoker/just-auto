@@ -1,5 +1,5 @@
 
-@mixin transition($property: all, $speed: 0.3s, $time-function: ease) {
+@mixin transition($property: all, $speed: $speed, $time-function: $time-function) {
   transition-property: $property;
   transition-duration: $speed;
   transition-timing-function: $time-function;
@@ -13,11 +13,11 @@
 }
 
 /* FONT SourceSansPro */
-//@mixin fl {font-family: 'Montserrat-Light',sans-serif;}
-//@mixin fr {font-family: 'Montserrat-Regular',sans-serif;}
-//@mixin fm {font-family: 'Montserrat-Medium',sans-serif;}
-//@mixin fdb {font-family: 'Montserrat-SemiBold',sans-serif;}
-//@mixin fb {font-family: 'Montserrat-Bold',sans-serif;}
+//@mixin fl {font-family: 'Rubik-Light',sans-serif;}
+//@mixin fr {font-family: 'Rubik-Regular',sans-serif;}
+//@mixin fm {font-family: 'Rubik-Medium',sans-serif;}
+//@mixin fdb {font-family: 'Rubik-SemiBold',sans-serif;}
+//@mixin fb {font-family: 'Rubik-Bold',sans-serif;}
 
 /*images*/
 
@@ -125,31 +125,31 @@
 /* Single property transition mixin */
 $animation-speed: .3s;
 
-@mixin multi-transition($transition, $properties-list...) {
+@mixin multi-transition($transition: $speed, $function: $time-function, $properties-list...) {
   transition-duration: $transition;
-  //transition-timing-function: ease-in-out;
+  transition-timing-function: $function;
   transition-property: $properties-list;
 }
 
 @mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
+  width: $width + px;
+  height: $height + px;
 }
 
 
 // fonts
-@mixin font($fontName, $folderName, $fileName, $weight, $style) {
+@mixin font($weight, $style, $fileName, $folderName, $fontName: $folderName) {
   @font-face {
-    font-family: #{$fontName};
+    font-family: '#{$fontName}';
     font-display: swap;
-    src: url("../fonts/#{$folderName}/#{$fileName}.woff") format("woff"), url("../fonts/#{$folderName}/#{$fileName}.woff2") format("woff2");
+    src: url("../fonts/#{$folderName}/#{$fileName}.ttf") format("ttf");
     font-weight: #{$weight};
     font-style: #{$style};
   }
 }
 
 // hover
-@mixin hover($speed: 0.3s, $time-function: ease, $properties: all) {
+@mixin hover($properties: all, $speed: $speed, $time-function: $time-function) {
   transition-time-function: $time-function;
   transition-duration: $speed;
   transition-property: $properties;
@@ -235,8 +235,18 @@ $animation-speed: .3s;
 }
 
 // flex-basis
-@mixin flex-basis-responsive($number, $gap, $item) {
-  flex-basis: calc((100% - #{$number} * #{$gap}) / #{$item});
+@mixin flex-template($item, $gap) {
+  flex-basis: calc((100% - #{$item - 1} * #{$gap}) / #{$item});
+}
+
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-template($diraction , $item) {
+  -ms-grid-#{$diraction}: $item;
+  grid-template-#{$diraction}: $item;
 }
 
 @mixin line-clamp($clamp, $height: none) {
