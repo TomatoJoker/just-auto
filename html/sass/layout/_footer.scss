@@ -78,12 +78,7 @@
       @include font-settings(14, 17);
       text-transform: uppercase;
       font-weight: 700;
-      @include hover {
-        color: $primary;
-      }
-      &:focus {
-        color: $primary;
-      }
+      @include hover-focus-link;
     }
   }
   &__right {
@@ -127,12 +122,7 @@
     @include media(540) {
       font-size: 16px;
     }
-    @include hover {
-      color: $primary;
-    }
-    &:focus {
-      color: $primary;
-    }
+    @include hover-focus-link;
   }
   &__social {
     margin-top: 26px;

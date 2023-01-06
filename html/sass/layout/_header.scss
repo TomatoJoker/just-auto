@@ -1,3 +1,82 @@
 .header {
+  padding-top: 21px;
+  padding-bottom: 28px;
+  color: $dark;
+  font-weight: 700;
+  border-bottom: 1px solid $dark;
+  &__main {
+    color: $light;
+    border-bottom: none;
+  }
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__left {
+    @include gap(column, 52px);
+  }
+  &__logo {
+    margin-right: 52px;
+  }
+  &__link {
+    margin-right: 44px;
+    margin-top: 10px;
+  }
+  &__social {
+    margin-right: 18px;
+    @include gap(column, 14px);
+    align-self: flex-start;
+    margin-top: 15px;
+    .pseudo-icon {
+      @include size(20, 21);
+    }
+  }
+  &__dropdown {
+    margin-top: 16px;
+    margin-left: 12px;
+    align-self: flex-start;
+    position: relative;
+    &.is-open {
+      .header__lang-active {
+        .icon {
+            transform: scaleY(-1);
+        }
+      }
+      .header__lang-list {
+        transform: translateY(100%) scale(1);
+        pointer-events: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__lang-list {
+    $padding: 15px;
+    padding: 12px $padding;
+    border-radius: 10px;
+    background: $light;
+    border: 1px solid $dark;
+    position: absolute;
+    bottom: -5px;
+    transform: translateY(100%) scale(0);
+    visibility: hidden;
+    pointer-events: none;
+    left: -$padding;
+    @include transition;
+    opacity: 0;
+  }
+  &__lang-active {
+    display: flex;
+    align-items: center;
+    @include gap(column, 4px);
+    .icon {
+      @include transition;
+    }
+  }
+  &__link,
+  &__lang {
+    @include hover-focus-link;
+  }
 
 }

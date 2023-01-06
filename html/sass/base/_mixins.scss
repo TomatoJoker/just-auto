@@ -312,3 +312,12 @@ $animation-speed: .3s;
     @return $number;
   }
 }
+
+@mixin hover-focus($color: $primary) {
+  @include hover {
+    color: $color;
+  }
+  &:focus {
+    color: $color;
+  }
+}
