@@ -239,16 +239,6 @@ $animation-speed: .3s;
   flex-basis: calc((100% - #{$item - 1} * #{$gap}) / #{$item});
 }
 
-@mixin display-grid {
-  display: -ms-grid;
-  display: grid;
-}
-
-@mixin grid-template($diraction , $item) {
-  -ms-grid-#{$diraction}: $item;
-  grid-template-#{$diraction}: $item;
-}
-
 @mixin line-clamp($clamp, $height: none) {
   display: -webkit-box;
   -webkit-line-clamp: $clamp;
