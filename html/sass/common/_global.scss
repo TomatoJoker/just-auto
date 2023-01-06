@@ -1,6 +1,7 @@
 body {
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
+  box-sizing: border-box;
   @include media(767) {
     font-size: 12px;
   }
