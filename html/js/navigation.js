@@ -10,5 +10,5 @@ function pageWidget(pages) {
   widgetStilization.prependTo(".widget_wrap");
 }
 $(function () {
-  pageWidget(['index']);
+  pageWidget(['index', 'our-work']);
 });

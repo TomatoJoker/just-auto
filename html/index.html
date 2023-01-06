@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>Home</title>
+    <title>Главная</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png">
     <link rel="preload" href="./fonts/Rubik/Rubik-Regular.ttf" as="font" type="font/ttf" crossorigin="">
     <link rel="preload" href="./fonts/Rubik/Rubik-Bold.ttf" as="font" type="font/ttf" crossorigin="">
     <link rel="stylesheet" type="text/css" href="./css/common.min.css">
@@ -14,7 +17,32 @@
 <body>
 <div class="wrapper">
     <header class="header header__main">
-        <div class="container"></div>
+        <div class="container">
+            <div class="header__inner row">
+                <nav class="header__left">
+                    <ul class="header__desktop-menu menu">
+                        <li class="menu__item"><a href="#">Грузовые автомобили</a></li>
+                        <li class="menu__item"><a href="#">Наши работы</a></li>
+                        <li class="menu__item"><a href="#">Отзывы</a></li>
+                        <li class="menu__item"><a href="#">Калькулятора</a></li>
+                        <li class="menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <button type="button" class="header__link">Заказать авто</button>
+                    <div class="header__dropdown">
+                        <button class="header__lang header__lang-active">EN
+                            <svg class="icon" width="9" height="8">
+                                <use href="./i/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="header__lang-list">
+                            <li class="header__lang-item"><a class="header__lang" href="">RU</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="main">
         <div class="container"><h1>h1 title</h1>
@@ -25,18 +53,20 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__inner">
-                <div class="footer__left">
-                    <div class="footer__logo logo"><img src="./images/logo.svg" alt="logo" width="123" height="48">
-                    </div>
-                    <h4 class="h4-title footer__sub-title">Мы поможем вам купить автомобиль из германии</h4></div>
-                <ul class="footer__list">
-                    <li class="footer__link"><a href="#">Грузовые автомобили</a></li>
-                    <li class="footer__link"><a href="#">Наши работы</a></li>
-                    <li class="footer__link"><a href="#">Отзывы</a></li>
-                    <li class="footer__link"><a href="#">Пользовательское соглашение</a></li>
-                    <li class="footer__link"><a href="#">Калькулятора</a></li>
-                    <li class="footer__link"><a href="#">Контакты</a></li>
-                </ul>
+                <div class="footer__left"><a class="footer__logo logo" href="./index.html"><img src="./images/logo.svg"
+                                                                                                alt="logo" width="123"
+                                                                                                height="48"></a><h4
+                        class="h4-title footer__sub-title">Мы поможем вам купить автомобиль из германии</h4></div>
+                <nav>
+                    <ul class="footer__list">
+                        <li class="footer__link"><a href="#">Грузовые автомобили</a></li>
+                        <li class="footer__link"><a href="#">Наши работы</a></li>
+                        <li class="footer__link"><a href="#">Отзывы</a></li>
+                        <li class="footer__link"><a href="#">Пользовательское соглашение</a></li>
+                        <li class="footer__link"><a href="#">Калькулятора</a></li>
+                        <li class="footer__link"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
                 <div class="footer__right">
                     <div class="footer__address">
                         <address class="footer__address-item">
