@@ -16,10 +16,9 @@ a {
 }
 
 .container {
-  $desctop-padding: 44px;
-  max-width: 1642px + ($desctop-padding * 2);
-  padding-left: $desctop-padding;
-  padding-right: $desctop-padding;
+  max-width: calc(#{$container});
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
   margin-left: auto;
   margin-right: auto;
   @include media(540) {
@@ -113,6 +112,7 @@ blockquote {
 
 h1, h2, h3, h4, h4, h6, .h1-title, .h2-title, .h3-title, .h4-title, .h5-title, .h6-title {
   display: block;
+  text-transform: uppercase;
 }
 
 h1, .h1-title {
@@ -152,6 +152,17 @@ h4, h5, h6 .h4-title, .h5-title, .h6-title  {
 
 .sub-title {
   @include font-settings(12, 14);
+  & > * {
+    @include font-settings(12, 14);
+  }
+}
+
+.text-wrap {
+  p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 
@@ -166,13 +177,6 @@ h4, h5, h6 .h4-title, .h5-title, .h6-title  {
   flex: 1 0 auto;
 }
 
-.is-open,
-.is-visible {
-  visibility: visible !important;
-  pointer-events: auto !important;
-  opacity: 1 !important;
-}
-
 .overlay {
   @include transition;
   position: absolute;
@@ -185,4 +189,41 @@ h4, h5, h6 .h4-title, .h5-title, .h6-title  {
   background: rgba(0, 0, 0, 0.8);
   z-index: 97;
   cursor: pointer;
+}
+
+
+.is-open,
+.is-visible {
+  visibility: visible !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+.card {
+  border-radius: 10px;
+  background: $second;
+  padding: 13px 0px;
+  padding-left: 25px;
+  padding-right: 14px;
+  &__title {
+    margin-bottom: 10px;
+  }
+}
+
+.input {
+  color: $second-dark;
+  @include font-settings(16, 19);
+  padding: 5px 12px;
+  background: $transparent;
+  border: none;
+  border-bottom: 1px solid $second-dark;
+  max-width: 249px;
+  width: 100%;
+  @include transition;
+  @include placeholder {
+    opacity: 1;
+  }
+  &:focus{
+    border-bottom-color: $primary;
+  }
 }

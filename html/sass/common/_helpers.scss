@@ -4,11 +4,6 @@
   text-overflow: ellipsis;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
 .grid {
   display: grid;
   @include grid-col(2);

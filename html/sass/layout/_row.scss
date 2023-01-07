@@ -1,0 +1,18 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  --gap: 75px;
+  &__small-gap {
+    --gap: 20px;
+  }
+  &__item {
+    max-width: calc((100% - var(--gap)) / 2);
+    width: 100%;
+  }
+  &__item-right-container {
+    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    & > * {
+      margin-right: $desktop-padding;
+    }
+  }
+}

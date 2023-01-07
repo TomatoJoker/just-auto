@@ -21,6 +21,12 @@
         background: $dark-light;
         border-color: $dark-light;
       }
+      &__desktop-menu {
+        margin-left: 203px;
+        @include media(1200) {
+          margin-left: 0px;
+        }
+      }
     }
   }
   &__left,

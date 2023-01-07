@@ -1,0 +1,31 @@
+.contact {
+  padding-top: 86px;
+  &__section {
+    padding-top: 83px;
+  }
+  &__map {
+    frame {
+      border: 0px !important;
+    }
+  }
+  &__heading {
+    padding-left: 23px;
+    margin-bottom: 54px;
+  }
+  &__cards {
+    &:not(:last-child) {
+      margin-bottom: 37px;
+    }
+  }
+  &__form {
+    margin-top: 10px;
+    .form__button {
+      margin: 12px 0px 0px;
+    }
+  }
+  &__button-wrapper {
+    padding: 33px;
+    display: flex;
+    @include gap(column, 16px);
+  }
+}

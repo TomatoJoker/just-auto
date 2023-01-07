@@ -1,0 +1,29 @@
+.button {
+  padding: 17px 40px;
+  background: $primary;
+  border: 2px solid $primary;
+  color: $light;
+  text-transform: uppercase;
+  @include font-settings(14, 24);
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  @include hover-focus {
+    background: $transparent;
+    color: $primary;
+  }
+  .pseudo-icon {
+    margin-right: 20px;
+    @include size(42);
+  }
+  &__second {
+    padding: 15px 53px;
+    @include font-settings(14, 24);
+  }
+  &__dark {
+    background: $dark;
+    border-color: $dark;
+    color: $light;
+  }
+}

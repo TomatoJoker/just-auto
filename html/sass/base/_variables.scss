@@ -4,9 +4,14 @@ $dark: #000000;
 $dark-light: #1B1B1B;
 $primary: #EF7F1A;
 $second: #F3F3F3;
+$second-dark: #929292;
 
 $body-background: $light;
 $transparent: rgba(255, 255, 255, 0);
 
 $speed: 0.3s;
 $time-function: ease-in-out;
+
+//layout
+$desktop-padding: 44px;
+$container: 1642px + (#{$desktop-padding * 2});
