@@ -142,7 +142,7 @@ $animation-speed: .3s;
   @font-face {
     font-family: '#{$fontName}';
     font-display: swap;
-    src: url("../fonts/#{$folderName}/#{$fileName}.ttf") format("ttf");
+    src: url("../fonts/#{$folderName}/#{$fileName}.ttf") format("truetype");
     font-weight: #{$weight};
     font-style: #{$style};
   }
@@ -150,13 +150,33 @@ $animation-speed: .3s;
 
 // hover
 @mixin hover($properties: all, $speed: $speed, $time-function: $time-function) {
-  transition-time-function: $time-function;
+  transition-timing-function: $time-function;
   transition-duration: $speed;
   transition-property: $properties;
   @media (any-hover: hover) {
     &:hover {
       @content;
     }
+  }
+}
+
+// hover and focus for link
+@mixin hover-focus-link($color: $primary) {
+  @include hover {
+    color: $color;
+  }
+  &:focus {
+    color: $color;
+  }
+}
+
+// hover and focus for property
+@mixin hover-focus {
+  @include hover {
+    @content;
+  }
+  &:focus {
+    @content;
   }
 }
 
@@ -313,11 +333,3 @@ $animation-speed: .3s;
   }
 }
 
-@mixin hover-focus($color: $primary) {
-  @include hover {
-    color: $color;
-  }
-  &:focus {
-    color: $color;
-  }
-}
