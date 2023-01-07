@@ -15,7 +15,6 @@
     color: $light;
     border-bottom: none;
     position: absolute;
-    z-index: 2;
     width: 100%;
     .header {
       &__lang-list {
@@ -34,23 +33,57 @@
     @include size(45, 28);
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    z-index: 100;
     @include media(1200) {
       display: flex;
     }
     @include media(540) {
       @include size(29, 18);
     }
+    span {
+      margin: auto 0;
+      transform-origin: left;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+    }
+    &:before {
+      top: 0px;
+    }
+    &:after {
+      bottom: 0px;
+    }
     span,
     &:before,
     &:after {
+      display: block;
       content: '';
       width: 100%;
       height: 4px;
       background: currentColor;
       border-radius: 2px;
+      @include transition;
       @include media(540) {
         height: 2px;
+      }
+    }
+    &.is-active {
+      color: $dark;
+      span {
+        transform: scaleX(0);
+      }
+      &:before,
+      &:after {
+
+      }
+      &:before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
       }
     }
   }
@@ -101,22 +134,6 @@
     @include media(540) {
       display: none;
     }
-    &.is-open {
-      .header__lang-active {
-        .icon {
-            transform: scaleY(-1);
-        }
-      }
-      .header__lang-list {
-        transform: translateY(100%) scale(1);
-        pointer-events: auto;
-        visibility: visible;
-        opacity: 1;
-      }
-      .header__lang {
-        pointer-events: auto;
-      }
-    }
   }
   &__lang-list {
     $padding: 15px;
@@ -132,22 +149,77 @@
     left: -$padding;
     @include transition;
     opacity: 0;
+    &.is-open {
+      transform: translateY(100%) scale(1);
+      .header__lang {
+        pointer-events: auto;
+      }
+    }
   }
   &__lang {
     pointer-events: none;
-    text-transform: uppercase;
   }
   &__lang-active {
     display: flex;
     align-items: center;
     pointer-events: auto;
     @include gap(column, 4px);
+    @include media(1200) {
+      color: $primary;
+    }
     .icon {
       @include transition;
+    }
+    &.is-active {
+      .icon {
+        transform: scaleY(-1);
+      }
     }
   }
   &__link,
   &__lang {
+    text-transform: uppercase;
     @include hover-focus-link;
+  }
+  &__modal {
+    color: $dark;
+    max-width: 320px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    background: $light;
+    border: 1px solid $dark;
+    padding: 100px 35px;
+    height: 100vh;
+    width: 100%;
+    transform-origin: left top;
+    transform: scale(0);
+    visibility: hidden;
+    pointer-events: none;
+    @include transition($time-function: ease-out);
+    &.is-open {
+      transform: scale(1);
+    }
+  }
+  &__mobile-menu {
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    @include gap(row, 15px);
+  }
+  &__mobile-lang {
+    margin-top: 45px;
+    display: flex;
+    @include gap(column, 8px);
+    .header__lang {
+      pointer-events: auto;
+    }
+  }
+  &__mobile-item {
+    &:not(:last-child) {
+      border-right: 1px solid $dark;
+      padding-right: 8px;
+    }
   }
 }

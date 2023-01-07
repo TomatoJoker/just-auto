@@ -1,4 +1,6 @@
 .logo {
+  display: inline-block;
+  line-height: 0;
   &[href] {
     img {
       transition: inherit;

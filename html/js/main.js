@@ -1,6 +1,6 @@
 "use strict";
 
-$(function () {
+$(function ($) {
   $('.js-button-dropdown').on('click', function () {
     $(this).toggleClass('is-active').closest('.js-dropdown-block').find('.js-dropdown-item').toggleClass('is-open');
   });
