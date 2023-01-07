@@ -1,0 +1,12 @@
+.logo {
+  &[href] {
+    img {
+      transition: inherit;
+    }
+    @include hover-focus {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

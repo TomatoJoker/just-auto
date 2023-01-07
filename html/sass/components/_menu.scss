@@ -1,0 +1,10 @@
+.menu {
+  &__item {
+    a {
+      @include font-settings(14, 17);
+      text-transform: uppercase;
+      font-weight: 700;
+      @include hover-focus-link;
+    }
+  }
+}

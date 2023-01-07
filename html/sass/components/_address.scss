@@ -1,0 +1,30 @@
+.address {
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    @include gap(column, 20px);
+    &:not(:last-child) {
+      margin-bottom: 12px;
+      @include media(540) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  &__icon-wrapper {
+    @include size(18, 18);
+  }
+  &__icon {
+    color: inherit;
+  }
+  &__text {
+    max-width: 307px;
+    @include media(540) {
+      font-size: 14px;
+      max-width: 208px;
+    }
+  }
+  &__phone {
+    max-width: none;
+    @include hover-focus-link;
+  }
+}
