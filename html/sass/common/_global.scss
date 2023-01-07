@@ -139,7 +139,7 @@ h3, .h3-title {
   }
 }
 
-h4, h5, h6 .h4-title, .h5-title, .h6-title  {
+h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   @include font-settings(24, 28);
   @include media(1200) {
     font-size: 20px;

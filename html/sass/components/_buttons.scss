@@ -14,7 +14,7 @@
     color: $primary;
   }
   .pseudo-icon {
-    margin-right: 20px;
+    margin-left: 20px;
     @include size(42);
   }
   &__second {
@@ -25,5 +25,8 @@
     background: $dark;
     border-color: $dark;
     color: $light;
+    @include hover {
+      color: $dark;
+    }
   }
 }

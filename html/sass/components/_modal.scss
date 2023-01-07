@@ -1,0 +1,38 @@
+.fancybox-container {
+  cursor: pointer;
+}
+
+.modal {
+  border-radius: 10px;
+  max-width: 399px;
+  min-height: 430px;
+  background: $light;
+  display: none;
+  cursor: auto;
+  padding: 42px 79px 26px 71px;
+  @include media(540) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__top {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  &__separate {
+    margin-top: 25px;
+    color: $second-dark;
+    display: block;
+    text-align: center;
+  }
+  &__bottom {
+    margin-top: 18px;
+    max-width: 162px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__social {
+    margin-top: 25px;
+    justify-content: center;
+  }
+}

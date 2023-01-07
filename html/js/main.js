@@ -16,4 +16,8 @@ $(function ($) {
   $('.js-overlay').on('click', function () {
     burger('.js-burger-menu', this);
   });
+  $('[data-fancybox]').fancybox({
+    smallBtn: false,
+    toolbar: false
+  });
 });

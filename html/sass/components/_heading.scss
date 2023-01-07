@@ -1,6 +1,6 @@
 .heading {
   &__small {
-    &__title {
+    .heading__title {
       @include min-media(1201) {
         margin-bottom: 9px;
       }
