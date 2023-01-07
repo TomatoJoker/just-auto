@@ -5,8 +5,8 @@
     @include gap(column, 20px);
     &:not(:last-child) {
       margin-bottom: 12px;
-      @include media(540) {
-        margin-bottom: 18px;
+      @include media(1200) {
+        margin-bottom: 25px;
       }
     }
   }

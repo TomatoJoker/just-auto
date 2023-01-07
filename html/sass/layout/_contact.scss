@@ -2,19 +2,70 @@
   padding-top: 86px;
   &__section {
     padding-top: 83px;
+    @include media(1200) {
+      padding-top: 143px;
+    }
+    @include media(540) {
+      padding-top: 54px;
+    }
+  }
+  &__row {
+    @include media(1200) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__item {
+    @include media(1200) {
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+      .row__item-right-container {
+        & > * {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+    }
+    @include media(540) {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
   }
   &__map {
+    line-height: 0px;
     frame {
       border: 0px !important;
+    }
+    @include media(1200) {
+      padding: 0px;
     }
   }
   &__heading {
     padding-left: 23px;
     margin-bottom: 42px;
+    @include media(1200) {
+      padding-left: 0px;
+      margin-bottom: 52px;
+    }
+    @include media(540) {
+      margin-bottom: 24px;
+    }
   }
   &__cards {
+    @include media(1200) {
+      flex-direction: column;
+    }
     &:not(:last-child) {
       margin-bottom: 32px;
+    }
+    .card {
+      &:not(:last-child) {
+        @include media(1200) {
+          margin-bottom: 20px;
+        }
+        @include media(540) {
+          margin-bottom: 24px;
+        }
+      }
     }
   }
   &__form {
@@ -25,7 +76,31 @@
   }
   &__button-wrapper {
     padding: 33px;
-    display: flex;
-    @include gap(column, 16px);
+    @include media(1200) {
+      padding-top: 52px;
+      padding-bottom: 72px;
+    }
+    @include media(540) {
+      border-radius: 0px;
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+      &:nth-child(n) {
+        margin-left: -$mobile-padding;
+        margin-right: -$mobile-padding;
+      }
+    }
+  }
+  &__button-title {
+    margin-bottom: 39px;
+    text-align: center;
+    @include min-media(1201) {
+      display: none;
+    }
+  }
+  &__item {
+    .button {
+      justify-content: center;
+      text-align: center;
+    }
   }
 }
