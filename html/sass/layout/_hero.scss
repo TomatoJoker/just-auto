@@ -1,4 +1,32 @@
 .hero {
+  margin-left: auto;
+  margin-right: auto;
+  &__slider {
+
+  }
+  &__slide {
+    position: relative;
+  }
+  &__slide-bg {
+    z-index: 0;
+    position: relative;
+  }
+  &__slide:before {
+    content: '';
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
   &__title {
     @include font-settings(96, 114);
     @include min-media(1200) {

@@ -171,6 +171,11 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: relative;
 }
 
 .main {
@@ -226,4 +231,8 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   &:focus{
     border-bottom-color: $primary;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -16,6 +16,7 @@
     border-bottom: none;
     position: absolute;
     width: 100%;
+    z-index: 98;
     .header {
       &__lang-list {
         background: $dark-light;
@@ -28,6 +29,9 @@
         }
       }
     }
+  }
+  &__inner {
+    flex-direction: row;
   }
   &__left,
   &__right {
