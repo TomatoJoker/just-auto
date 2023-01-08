@@ -14,8 +14,6 @@
   .wpcf7-response-output {
     @include font-settings(12, 14);
     color: red;
-    padding-bottom: 5px;
-    border-bottom: 1px solid red;
     margin-top: 5px;
   }
 }

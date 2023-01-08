@@ -1,15 +1,28 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  color: $light;
+  height: 880px;
   &__slider {
-
+    .slick-track {
+      display: flex;
+    }
+    &.slick-slider {
+      margin-bottom: 0px;
+    }
   }
   &__slide {
     position: relative;
+    float: none;
+    height: auto;
   }
   &__slide-bg {
     z-index: 0;
     position: relative;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   &__slide:before {
     content: '';
@@ -22,18 +35,222 @@
     top: 0px;
   }
   &__content {
+    width: 100%;
+  }
+  &__content-inner {
+    display: flex;
+  }
+  &__title-wrapper {
+    margin-top: auto;
+    margin-bottom: 23px;
+  }
+  &__title-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    &:after {
+      content: '';
+      @include size(82, 5);
+      background: $primary;
+    }
+  }
+  &__title-number {
+    @include font-settings(20, 24);
+    font-weight: 700;
+  }
+  &__title {
+    max-width: 800px;
+    @include font-settings(96, 114);
+    @include media(1200) {
+      @include font-settings(64, 76);
+    }
+    @include media(767) {
+      @include font-settings(24, 28);
+    }
+  }
+  &__button-wrapper {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    @include gap(column, 85px);
+  }
+  &__link {
+    text-transform: uppercase;
+    color: $primary;
+    position: relative;
+    font-weight: 700;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0px;
+      left: 0px;
+      background: currentColor;
+      transition: inherit;
+      transform-origin: left;
+    }
+    @include hover-focus {
+      &:before {
+        transform: scaleX(0);
+      }
+    }
+  }
+  &__content {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
+    top: 0px;
+    left: 0px;
   }
-  &__title {
-    @include font-settings(96, 114);
-    @include min-media(1200) {
-      @include font-settings(64, 76);
+  &__padding-top {
+    padding-top: 161px;
+  }
+  &__padding-bottom {
+    padding-bottom: 88px;
+  }
+  &__upper {
+    z-index: 2;
+  }
+  &__container-left {
+    padding-left: 135px;
+    @include media(1920) {
+      padding-left: calc((100vw - #{$desktop-width}) / 2);
     }
-    @include min-media(767) {
-      @include font-settings(24, 28);
+    @include media(1730) {
+      padding-left: $desktop-padding;
     }
+    @include media(540) {
+      padding-left: $mobile-padding;
+    }
+  }
+  &__container-right {
+    padding-right: 135px;
+    @include media(1920) {
+      padding-right: calc((100vw - #{$desktop-width}) / 2);
+    }
+    @include media(1730) {
+      padding-right: $desktop-padding;
+    }
+    @include media(540) {
+      padding-right: $mobile-padding;
+    }
+  }
+  &__logo-wrapper {
+    margin-top: 6px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  &__padding,
+  &__row,
+  &__content-inner {
+    height: 100%;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__sub-title {
+    margin-top: 20px;
+    text-transform: uppercase;
+    max-width: 360px;
+  }
+  &__counter-wrapper {
+    display: flex;
+    @include gap(column, 45px);
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    &:before {
+      content: '';
+      display: block;
+      @include size(35, 18);
+      background: $primary;
+      transform: skew(-10deg);
+    }
+  }
+  &__counter-block {
+    width: 3em;
+    @include font-settings(20, 23);
+    font-weight: 700;
+    .slick-track {
+      position: absolute;
+      top: 47px;
+    }
+  }
+  &__count {
+    text-align: center;
+    &:not(:last-child) {
+      padding-bottom: 16px;
+    }
+    &.slick-current {
+      pointer-events: none;
+      span {
+        transform: scale(2);
+      }
+    }
+    span {
+      cursor: pointer;
+      display: block;
+      @include transition;
+      @include hover {
+        color: $primary;
+        text-align: center;
+      }
+    }
+  }
+  &__dots-wrapper {
+    display: flex;
+    @include gap(column, 10px);
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__arrow {
+    width: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.slick-disabled {
+      pointer-events: none;
+      color: $second-dark;
+    }
+    @include hover {
+      color: $primary
+    }
+  }
+  &__arrow-left {
+    order: 0;
+  }
+  &__dots {
+    order: 2;
+    display: flex;
+    @include gap(column, 14px);
+    align-items: center;
+    li {
+      line-height: 0;
+    }
+    button {
+      font-size: 0;
+      @include size(15);
+      border-radius: 50%;
+      background: $second;
+      @include transition();
+    }
+    .slick-active {
+      button {
+        background: $primary;
+      }
+    }
+  }
+  &__arrow-right {
+    order: 3;
   }
 }
