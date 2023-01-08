@@ -9,6 +9,7 @@ $(function ($) {
     $(button).toggleClass('is-active');
     $('.js-header-modal').toggleClass('is-open');
     $(overlay).toggleClass('is-visible');
+    $('body').toggleClass('no-scroll');
   }
   $('.js-burger-menu').on('click', function () {
     burger(this);
@@ -19,5 +20,10 @@ $(function ($) {
   $('[data-fancybox]').fancybox({
     smallBtn: false,
     toolbar: false
+  });
+  $('.js-hero-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true
   });
 });
