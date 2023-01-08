@@ -4,6 +4,13 @@
   position: relative;
   color: $light;
   height: 880px;
+  background: $dark-light;
+  @include media(1200) {
+    height: 1133px;
+  }
+  @include media(540) {
+    height: 558px;
+  }
   &__slider {
     .slick-track {
       display: flex;
@@ -16,6 +23,12 @@
     position: relative;
     float: none;
     height: auto;
+    //@include transition;
+    //transform: scaleX(0);
+    &.slick-active {
+      //transform: scaleX(1);
+      opacity: 1;
+    }
   }
   &__slide-bg {
     z-index: 0;
@@ -23,6 +36,9 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    @include media(1200) {
+      height: 100%;
+    }
   }
   &__slide:before {
     content: '';
@@ -146,7 +162,10 @@
   }
   &__padding,
   &__row,
-  &__content-inner {
+  &__content-inner,
+  &__slider,
+  &__slider .slick-list,
+  &__slider .slick-track{
     height: 100%;
   }
   &__row {

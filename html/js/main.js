@@ -53,7 +53,9 @@ $(function ($) {
     speed: speed * 1.3,
     cssEase: timeFunction,
     prevArrow: '<button class="hero__arrow hero__arrow-left"><svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"/></svg></button>',
-    nextArrow: '<button class="hero__arrow hero__arrow-right"><svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg></button>'
+    nextArrow: '<button class="hero__arrow hero__arrow-right"><svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg></button>',
+    waitForAnimate: false,
+    accessibility: false
   });
   $(counter).slick({
     vertical: true,
@@ -62,7 +64,8 @@ $(function ($) {
     infinite: true,
     initialSlide: startSlide - 1,
     swipe: false,
-    touchMove: false
+    touchMove: false,
+    accessibility: false
   });
   counterClick(counter);
   counterClick(heroSlider);
