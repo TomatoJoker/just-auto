@@ -28,6 +28,17 @@ $(function ($) {
     smallBtn: false,
     toolbar: false
   });
+  $('[data-fancybox="images"]').fancybox({
+    btnTpl: {
+      arrowRight: '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '<div class="arrow">' + '    <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg>' + '</div>' + '</button>',
+      arrowLeft: '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '<div class="arrow">' + '    <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"></path></svg>' + '</div>' + '</button>',
+      smallBtn: '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + '<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>' + '</svg>' + '</button>'
+    },
+    smallBtn: true
+  });
+  // $('.js-lightbox').on('click', function () {
+  //    $(this).fancybox();
+  // });
   var counter = '.js-counter',
     heroSlider = '.js-hero-slider',
     startSlide = 2,

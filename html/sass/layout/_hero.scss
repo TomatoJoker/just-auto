@@ -5,7 +5,7 @@
   color: $light;
   height: 880px;
   background: $dark-light;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   @include media(1200) {
     height: 1133px;
     margin-bottom: 0%;
@@ -76,15 +76,26 @@
   &__title-number {
     @include font-settings(20, 24);
     font-weight: 700;
+    @include media(540) {
+      font-size: 12px;
+    }
   }
   &__title {
     max-width: 800px;
+    @include media(767) {
+      @include font-settings(24, 28);
+    }
   }
   &__button-wrapper {
     margin-top: 7px;
     display: flex;
     align-items: center;
     @include gap(column, 85px);
+    @include media(540) {
+      margin-top: 33px;
+      flex-direction: row-reverse;
+      @include gap(column, 39px);
+    }
   }
   &__link {
     text-transform: uppercase;
@@ -118,9 +129,15 @@
   }
   &__padding-top {
     padding-top: 161px;
+    @include media(540) {
+      padding-top: 89px;
+    }
   }
   &__padding-bottom {
     padding-bottom: 88px;
+    @include media(540) {
+      padding-bottom: 73px;
+    }
   }
   &__upper {
     z-index: 2;
@@ -172,6 +189,10 @@
     margin-top: 20px;
     text-transform: uppercase;
     max-width: 360px;
+    @include media(540) {
+      font-size: 14px;
+      max-width: 274px;
+    }
   }
   &__counter-wrapper {
     display: flex;
@@ -186,6 +207,9 @@
       @include size(35, 18);
       background: $primary;
       transform: skew(-10deg);
+    }
+    @include media(540) {
+      display: none;
     }
   }
   &__counter-block {

@@ -1,0 +1,15 @@
+.video {
+  max-width: 389px;
+  @include media(1200) {
+    max-width: 329px;
+  }
+  @include media(540) {
+    max-width: 228px;
+  }
+  &__sub-title {
+    margin-top: 14px;
+    @include font-settings(14, 16);
+    padding-left: 11px;
+    text-transform: uppercase;
+  }
+}

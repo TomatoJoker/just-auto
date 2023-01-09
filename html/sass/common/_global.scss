@@ -159,12 +159,10 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 }
 
 .main-title {
+  font-weight: 700;
   @include font-settings(96, 114);
   @include media(1200) {
     @include font-settings(64, 76);
-  }
-  @include media(767) {
-    @include font-settings(24, 28);
   }
 }
 
@@ -194,9 +192,9 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 }
 
 .section {
-  padding: 80px 0px;
+  padding: 40px 0px;
   @include media(1200) {
-    padding: 50px 0px;
+    padding: 25px 0px;
   }
 }
 
@@ -253,4 +251,10 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.fancybox-content {
+  background: $transparent;
+  padding: 0px;
+  line-height: 0;
 }

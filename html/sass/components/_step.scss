@@ -1,0 +1,33 @@
+.step {
+  max-width: 539px;
+  &__top {
+    padding-bottom: 18px;
+    border-bottom: 11px solid $dark;
+    max-width: 279px;
+    @include media(540) {
+      max-width: 179px;
+    }
+  }
+  &__number-wrapper {
+    position: relative;
+    max-width: 130px;
+  }
+  &__number {
+    color: $second-dark;
+  }
+  &__icon-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: 18px;
+    @include media(1200) {
+      display: none;
+    }
+  }
+  &__title {
+    max-width: 199px;
+    margin-bottom: 18px;
+  }
+  &__text {
+    margin-top: 19px;
+  }
+}

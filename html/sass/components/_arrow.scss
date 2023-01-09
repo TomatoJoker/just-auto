@@ -1,0 +1,48 @@
+.fancybox-button {
+  &.modal-arrow  {
+    padding: 0px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    z-index: 99995;
+    $margin-arrow: 450px;
+    background: $transparent;
+    .arrow {
+      padding: 0px;
+      height: 33px;
+    }
+    &__next {
+      left: calc(50% + #{$margin-arrow});
+      transform: translateY(-50%) translateX(-50%);
+    }
+    &__prev {
+      right: calc(50% + #{$margin-arrow});
+      transform: translateY(-50%) translateX(50%);
+    }
+    @include hover-focus {
+      .arrow {
+        background: $transparent;
+        color: $primary;
+      }
+    }
+  }
+}
+
+
+.arrow {
+  border-radius: 50%;
+  background: $primary;
+  color: $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(33);
+  border: 1px solid $primary;
+  @include transition();
+  .icon {
+    transition: inherit;
+    width: auto;
+    height: auto;
+  }
+}

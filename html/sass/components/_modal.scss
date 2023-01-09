@@ -1,5 +1,12 @@
 .fancybox-container {
   cursor: pointer;
+  .fancybox-slide,
+  {
+    @include media(540) {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+  }
 }
 
 .modal {
@@ -34,5 +41,70 @@
   &__social {
     margin-top: 25px;
     justify-content: center;
+  }
+  &__close {
+    &.fancybox-button {
+      top: -73px;
+      right: -133px;
+      background: $transparent;
+      svg {
+        transition: inherit;
+      }
+      @include hover-focus {
+        svg {
+          color: $primary;
+        }
+      }
+    }
+  }
+  $margin-arrow: 450px;
+  &__arrow {
+    &.fancybox-button {
+      padding: 0px;
+      height: auto;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      z-index: 99995;
+      background: $transparent;
+      @include hover-focus {
+        .arrow {
+          background: $transparent;
+          color: $primary;
+        }
+      }
+      .arrow {
+        padding: 0px;
+        height: 33px;
+      }
+    }
+  }
+  &__arrow-next {
+    left: calc(50% + #{$margin-arrow});
+    transform: translateY(-50%) translateX(-50%);
+    @include media(1200) {
+      left: auto;
+      right: 35px;
+    }
+    @include media(540) {
+      right: 4px;
+    }
+  }
+  &__arrow-prev {
+    right: calc(50% + #{$margin-arrow});
+    transform: translateY(-50%) translateX(50%);
+    @include media(1200) {
+      right: auto;
+      left: 35px;
+    }
+    @include media(540) {
+      left: 4px;
+    }
+  }
+  &__arrow-next,
+  &__arrow-prev {
+    @include media(1200) {
+      transform: translateY(-50%);
+    }
   }
 }

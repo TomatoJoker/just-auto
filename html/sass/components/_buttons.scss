@@ -1,7 +1,8 @@
 .button {
+  $border: 2px solid $primary;
   padding: 17px 40px;
   background: $primary;
-  border: 2px solid $primary;
+  border: $border;
   color: $light;
   text-transform: uppercase;
   @include font-settings(14, 24);
@@ -9,9 +10,17 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  @include media(540) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 27px;
+    padding-right: 27px;
+    font-size: 12px;
+  }
   @include hover-focus {
     background: $transparent;
     color: $primary;
+    border: $border;
   }
   .pseudo-icon {
     margin-left: 20px;
@@ -27,6 +36,7 @@
     color: $light;
     @include hover {
       color: $dark;
+      border-color: $dark;
     }
   }
 }

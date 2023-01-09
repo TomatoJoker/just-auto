@@ -1,0 +1,36 @@
+.how-we-work {
+  &__top {
+    @include gap(column, 30px);
+    &:not(:last-child) {
+      margin-bottom: 81px;
+      @include media(1200) {
+        margin-bottom: 30px;
+      }
+    }
+    @include media(1200) {
+      @include gap(row, 32px);
+    }
+  }
+  &__video {
+    flex-shrink: 0;
+    @include media(1200) {
+      .video {
+        margin-left: auto;
+      }
+    }
+  }
+  &__example {
+    column-gap: 20px;
+    @include media(1200) {
+      column-gap: 10px;
+    }
+    @include media(540) {
+      column-gap: 5px;
+    }
+  }
+  &__image {
+    img {
+      height: auto;
+    }
+  }
+}
