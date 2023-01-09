@@ -5,8 +5,10 @@
   color: $light;
   height: 880px;
   background: $dark-light;
+  margin-bottom: 20px;
   @include media(1200) {
     height: 1133px;
+    margin-bottom: 0%;
   }
   @include media(540) {
     height: 558px;
@@ -77,13 +79,6 @@
   }
   &__title {
     max-width: 800px;
-    @include font-settings(96, 114);
-    @include media(1200) {
-      @include font-settings(64, 76);
-    }
-    @include media(767) {
-      @include font-settings(24, 28);
-    }
   }
   &__button-wrapper {
     margin-top: 7px;

@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  @include grid-col(12);
+  column-gap: 27px;
+  @include media(1200) {
+    row-gap: 42px;
+  }
+  &__left {
+    grid-column: 1 / 4;
+  }
+  &__right {
+    grid-column: 4 / 13;
+  }
+  @include media(1200) {
+    &__left,
+    &__right {
+      grid-column: 1 / 13;
+    }
+  }
+}

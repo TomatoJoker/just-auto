@@ -158,6 +158,16 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   }
 }
 
+.main-title {
+  @include font-settings(96, 114);
+  @include media(1200) {
+    @include font-settings(64, 76);
+  }
+  @include media(767) {
+    @include font-settings(24, 28);
+  }
+}
+
 .text-wrap {
   p {
     &:not(:last-child) {
@@ -181,6 +191,13 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 .main {
   flex: 1 0 auto;
+}
+
+.section {
+  padding: 80px 0px;
+  @include media(1200) {
+    padding: 50px 0px;
+  }
 }
 
 .overlay {

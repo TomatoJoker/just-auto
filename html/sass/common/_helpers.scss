@@ -4,26 +4,6 @@
   text-overflow: ellipsis;
 }
 
-.grid {
-  display: grid;
-  @include grid-col(2);
-  @include grid-col(3);
-  @include grid-col(4);
-  @include grid-col(5);
-  &__left {
-    display: flex;
-    justify-content: flex-start;
-  }
-  &__right {
-    display: flex;
-    justify-content: flex-end;
-  }
-  &__center {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .hidden {
   display: none !important;
 }
