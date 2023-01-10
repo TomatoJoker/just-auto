@@ -27,13 +27,17 @@ $(function ($) {
   var iconArrowRight = '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '   <div class="arrow">' + '       <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg>' + '   </div>' + '</button>',
     iconArrowLeft = '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '   <div class="arrow">' + '       <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"></path></svg>' + '   </div>' + '</button>',
     iconClose = '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '   <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + '       <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>' + '   </svg>' + '</button>';
-  modal('[data-fancybox]', '[data-fancybox="images"]', iconClose, iconArrowRight, iconArrowLeft);
-  function modal(modal, imageModal, close, arrowRight, arrowLeft) {
-    $(modal).fancybox({
+  modal('.js-lightbox-first, .js-lightbox-second', 'modal__image-slide');
+  function modal(imageModal, slideClass) {
+    var close = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : iconClose;
+    var arrowRight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : iconArrowRight;
+    var arrowLeft = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : iconArrowLeft;
+    $('[data-fancybox]').fancybox({
       smallBtn: false,
       toolbar: false
     });
     $(imageModal).fancybox({
+      slideClass: slideClass,
       btnTpl: {
         arrowRight: arrowRight,
         arrowLeft: arrowLeft,
