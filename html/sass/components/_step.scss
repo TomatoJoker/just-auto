@@ -1,9 +1,19 @@
 .step {
   max-width: 539px;
   &__top {
-    padding-bottom: 18px;
-    border-bottom: 11px solid $dark;
+    position: relative;
     max-width: 279px;
+    --before-height: 11px;
+    padding-bottom: calc(18px + var(--before-height));
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: var(--before-height);
+      background: $dark;
+      bottom: 0px;
+      left: 0px;
+    }
     @include media(540) {
       max-width: 179px;
     }
@@ -25,9 +35,17 @@
   }
   &__title {
     max-width: 199px;
-    margin-bottom: 18px;
   }
   &__text {
     margin-top: 19px;
+  }
+  &__button {
+    margin-top: 27px;
+    @include media(1200) {
+      margin-top: 48px;
+    }
+    @include media(540) {
+      margin-top: 26px;
+    }
   }
 }

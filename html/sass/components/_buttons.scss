@@ -8,11 +8,11 @@
   @include font-settings(14, 24);
   font-weight: 700;
   border-radius: 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   @include media(540) {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 27px;
     padding-right: 27px;
     font-size: 12px;

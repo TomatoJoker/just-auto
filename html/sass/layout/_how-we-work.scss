@@ -1,4 +1,9 @@
 .how-we-work {
+  &__inner {
+    @include media(1200) {
+      row-gap: 26px;
+    }
+  }
   &__top {
     @include gap(column, 30px);
     &:not(:last-child) {

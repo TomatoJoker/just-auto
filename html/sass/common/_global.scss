@@ -99,6 +99,27 @@ a {
   }
 }
 
+.list {
+  li {
+    padding-left: 25px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      @include size(4);
+      border-radius: 50px;
+      background: currentColor;
+      color: $primary;
+      top: 50%;
+      left: 12.5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
 blockquote {
   border-left: 8px solid #121314;
   background-color: #F3F4FF;
@@ -118,14 +139,14 @@ h1, h2, h3, h4, h4, h6, .h1-title, .h2-title, .h3-title, .h4-title, .h5-title, .
 
 h1, .h1-title {
   @include font-settings(64, 76);
-  @include min-media(1200) {
+  @include media(1200) {
     font-size: 43px;
   }
 }
 
 h2, .h2-title {
   @include font-settings(48, 57);
-  @include min-media(1200) {
+  @include media(1200) {
     font-size: 40px;
   }
   @include media(540) {
@@ -149,6 +170,10 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 .medium-text {
   @include font-settings(16, 19);
+}
+
+.little-text {
+  @include font-settings(14, 17);
 }
 
 .sub-title {
@@ -192,10 +217,18 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 }
 
 .section {
-  padding: 40px 0px;
+  padding: 80px 0px;
   @include media(1200) {
-    padding: 25px 0px;
+    padding: 50px 0px;
   }
+  &__silver {
+    background: $second;
+  }
+}
+
+.dark-wrapper {
+  background: $dark;
+  color: $light;
 }
 
 .overlay {

@@ -1,0 +1,57 @@
+.buy {
+  &__video {
+    @include media(1200) {
+      display: none;
+    }
+  }
+  &__row {
+    @include gap(column, 5px);
+    @include media(1200) {
+      flex-direction: column;
+      @include gap(row, 40px);
+    }
+  }
+  &__step {
+    @include media(1200) {
+      width: 100%;
+    }
+    .step__top:before {
+      width: 59px;
+    }
+    .step__text {
+      @include min-media(541) {
+        @include media(1200) {
+          p {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      @include media(1200) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px;
+      }
+      @include media(540) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  &__example {
+    @include media(1200) {
+      column-gap: 24px;
+    }
+    @include media(540) {
+      column-gap: 11px;
+    }
+  }
+  &__image {
+    line-height: 0;
+    img {
+      height: auto;
+      @include media(1200) {
+        width: 100%;
+      }
+    }
+  }
+}

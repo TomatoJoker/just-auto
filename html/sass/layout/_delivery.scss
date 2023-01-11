@@ -1,0 +1,55 @@
+.delivery {
+  &__row {
+    display: flex;
+    @include gap(column, 12px);
+    @include media(540) {
+      position: relative;
+      flex-direction: column;
+      padding-bottom: 35px;
+    }
+  }
+  &__step {
+    @include media(540) {
+      max-width: 227px;
+    }
+    .step__top:before {
+      width: 84px;
+    }
+    .step__number {
+      color: $primary;
+    }
+    .step__icon-wrapper {
+      background: $dark;
+      border: $dark;
+    }
+    .step__button {
+      @include media(540) {
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+  }
+  &__list {
+    margin-top: 36px;
+    @include media(1200) {
+      margin-top: 148px;
+    }
+    @include media(540) {
+      margin-bottom: 36px;
+      margin-left: auto;
+      max-width: 230px;
+      margin-top: 28px;
+    }
+  }
+  &__step,
+  &__list {
+      @include min-media(541) {
+        @include media(1200) {
+          @include flex-template(2, 18px);
+        }
+      }
+    }
+  &__list-title {
+    margin-bottom: 18px;
+  }
+}

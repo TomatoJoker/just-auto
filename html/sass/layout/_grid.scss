@@ -1,5 +1,6 @@
 .grid {
   display: grid;
+  @include grid-col(2);
   @include grid-col(4);
   @include grid-col(12);
   column-gap: 27px;

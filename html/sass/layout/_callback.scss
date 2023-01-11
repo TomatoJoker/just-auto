@@ -1,0 +1,91 @@
+.callback {
+  padding: 30px 0px;
+  display: grid;
+  grid-template-columns: minmax(auto, 557px) 741px 1fr;
+  @include media(1200) {
+    padding-top: 59px;
+    padding-bottom: 71px;
+    grid-template-columns: (436px + $desktop-padding) 1fr;
+    row-gap: 25px;
+  }
+  @include media(540) {
+    grid-template-columns: (245px + $mobile-padding) 1fr;
+  }
+  @include media(380) {
+    grid-template-columns: auto 142px;
+  }
+  &:before {
+    content: '';
+    height: 4px;
+    background: $light;
+    margin-top: 15px;
+    margin-right: 35px;
+    @include media(1200) {
+      margin-right: 0px;
+      margin-top: 0px;
+      align-self: center;
+    }
+  }
+  &__title-wrapper {
+    @include media(1200) {
+      grid-column: 1 / 3;
+    }
+  }
+  &__title-width-container {
+    @include media(1200) {
+      max-width: 436px;
+      margin-left: $desktop-padding;
+    }
+    @include media(540) {
+      max-width: 245px;
+      margin-left: $mobile-padding;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    @include media(540) {
+      font-size: 20px;
+    }
+    span {
+      color: $primary;
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    color: $primary;
+    span {
+      color: $light;
+    }
+  }
+  &:before,
+  &__social-wrapper {
+    @include media(1200) {
+      order: 1;
+    }
+  }
+  &__social-wrapper {
+    align-self: center;
+    margin-left: 128px;
+    margin-right: 77px;
+    @include media(1200) {
+      margin-left: 59px;
+      margin-right: $mobile-padding;
+    }
+    @include media(540) {
+      margin-left: 25px;
+    }
+    .social {
+      @include gap(row, 50px);
+      @include media(540) {
+        @include gap(row, 25px);
+      }
+    }
+    .pseudo-icon {
+      @include size(42, 43);
+      @include media(540) {
+        @include size(34, 36);
+      }
+    }
+  }
+}
