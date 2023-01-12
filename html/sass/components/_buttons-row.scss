@@ -5,4 +5,15 @@
     flex-direction: column;
     @include gap(row, 11px);
   }
+  &__item {
+    @include media(1200) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .button {
+    @include media(540) {
+      font-size: 14px;
+    }
+  }
 }

@@ -1,0 +1,60 @@
+.large-callback {
+  &__inner {
+    position: relative;
+    padding: 45px 0px 60px;
+    @include media(1200) {
+      padding-top: 76px;
+      padding-bottom: 93px;
+    }
+    @include media(540) {
+      padding-top: 52px;
+      padding-bottom: 70px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      min-width: calc(100vw - (100vw - (#{$desktop-width} - #{$desktop-padding * 2}) * 2));
+      height: 100%;
+      border-radius: 0px 20px 20px 0px;
+      background: $dark;
+    }
+  }
+  &__inner {
+    padding-right: 48px;
+  }
+  &__row {
+    position: relative;
+    @include gap(column, 20px);
+    align-items: flex-end;
+    @include media(1200) {
+      flex-direction: column;
+      @include gap(row, 57px);
+      align-items: flex-start;
+    }
+  }
+  &__heading {
+    margin-bottom: 30px;
+  }
+  &__left {
+    max-width: 622px;
+    @include min-media(1441) {
+      margin-left: 83px;
+    }
+  }
+  &__buttons {
+    flex-shrink: 0;
+    align-self: flex-end;
+    @include media(1200) {
+      max-width: 342px;
+    }
+    @include media(540) {
+      max-width: 100%;
+      align-self: stretch;
+    }
+    .buttons__item {
+      justify-content: flex-start;
+    }
+  }
+}

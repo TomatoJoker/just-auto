@@ -19,6 +19,7 @@ a {
   max-width: calc(#{$container});
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   @include media(540) {
@@ -174,6 +175,9 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 .little-text {
   @include font-settings(14, 17);
+  & > * {
+    @include font-settings(14, 17);
+  }
 }
 
 .sub-title {
@@ -229,6 +233,23 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 .dark-wrapper {
   background: $dark;
   color: $light;
+  .heading {
+    &__title {
+      @include media(540) {
+        font-size: 20px;
+      }
+      span {
+        color: $primary;
+      }
+    }
+    &__text {
+      text-transform: uppercase;
+      color: $primary;
+      span {
+        color: $light;
+      }
+    }
+  }
 }
 
 .overlay {
@@ -290,4 +311,8 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   background: $transparent;
   padding: 0px;
   line-height: 0;
+}
+
+b,.bold {
+  font-weight: 700;
 }

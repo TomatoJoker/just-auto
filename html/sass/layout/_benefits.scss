@@ -5,15 +5,21 @@
   @include media(1200) {
     padding: 106px 0px 92px;
   }
+  @include media(540) {
+    padding-top: 61px;
+    padding-bottom: 25px;
+  }
   &:before,
   &:after {
-
     content: '';
     background-image: url("../images/benefits-decor.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     @include size(489, 518);
+    @include media(540) {
+      display: none;
+    }
   }
   &:before {
     right: -100px;
@@ -26,14 +32,22 @@
   &:after {
     left: -200px;
     bottom: -200px;
+    @include media(1200) {
+      bottom: 0px;
+    }
   }
   .container {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
   }
   &__heading {
     margin-bottom: 85px;
     text-align: center;
+    @include media(540) {
+      margin-bottom: 73px;
+    }
     .heading__title {
       color: $primary;
       span {
@@ -56,12 +70,26 @@
     @include media(1200) {
       grid-template-columns: 1fr;
     }
+    @include media(540) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include gap(row, 52px);
+    }
   }
   &__item {
     display: flex;
     @include gap(gap, #{$gap});
     order: 1;
     //grid-column: 1 / 2;
+    @include media(540) {
+      margin-left: -$mobile-padding;
+      &:nth-child(n) {
+        flex-direction: column;
+        @include gap(gap, 0);
+        max-width: calc(100% - 20px);
+      }
+    }
   }
   &__index-2 {
     order: 2;
@@ -72,6 +100,11 @@
       grid-column: auto;
       grid-row: none;
       flex-direction: row-reverse;
+    }
+    @include media(540) {
+      margin-right: -$mobile-padding;
+      align-self: flex-end;
+      order: 1;
     }
     .benefits__card-title {
       max-width: 252px;
@@ -101,6 +134,9 @@
   &__number {
     color: $primary;
     margin-top: -30px;
+    @include media(1200) {
+      margin-top: -20px;
+    }
   }
   &__card-title {
     margin-bottom: 14px;
@@ -119,5 +155,12 @@
     object-position: center;
     object-fit: cover;
     height: 100%;
+  }
+  &__button {
+    margin-top: 42px;
+    align-self: center;
+    @include media(540) {
+      margin-top: 50px;
+    }
   }
 }

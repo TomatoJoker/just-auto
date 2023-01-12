@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="./css/slick.min.css">
   <link rel="stylesheet" type="text/css" href="./css/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.css" integrity="sha512-a/02IBOTwuaufMgBLYpBKvO9y01S8rmk0l0+xSxQfI8PDgmxC1O/DJaH8PfAL43iTqed/V+q6OsCNH+o963PlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="./css/common.min.css">
   <link rel="stylesheet" type="text/css" href="./css/home-page.min.css">
 </head>
@@ -222,8 +223,15 @@
                                     </div>
                                 </div>
                                 <div class="how-we-work__video">
-                                    <div class="video">
-    <img src="./images/preview.png" width="389" height="260" alt="">
+                                    <div class="video video__large">
+    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+        <img src="./images/preview.png" width="389" height="260" alt="">
+        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+    </div>
     <div class="video__sub-title text-wrap">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
     </div>
@@ -266,8 +274,15 @@
                 <div class="container">
                     <div class="grid grid__col-12">
                         <div class="buy__video grid__left">
-                            <div class="video">
-    <img src="./images/preview.png" width="389" height="260" alt="">
+                            <div class="video video__large">
+    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+        <img src="./images/preview.png" width="389" height="260" alt="">
+        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+    </div>
     <div class="video__sub-title text-wrap">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
     </div>
@@ -320,9 +335,9 @@
             </section>
             <section class="callback dark-wrapper">
                 <div class="callback__title-wrapper">
-                    <div class="callback__title-width-container">
-                        <h2 class="callback__title h3-title"><span>Мы</span> Хотим ответить на все вопросы</h2>
-                        <p class="callback__text little-text">Напишите нам свой вопрос в удобный <span>Месседжер</span> ,и мы ответим вам  в ближайшее время</p>
+                    <div class="callback__title-width-container heading heading__small">
+                        <h2 class="heading__title h3-title"><span>Мы</span> Хотим ответить на все вопросы</h2>
+                        <p class="heading__text little-text">Напишите нам свой вопрос в удобный <span>Месседжер</span> ,и мы ответим вам  в ближайшее время</p>
                     </div>
                 </div>
                 <div class="callback__social-wrapper">
@@ -436,6 +451,39 @@
                     <a href="#" class="benefits__button button">заказать авто</a>
                 </div>
             </section>
+            <section class="large-callback section">
+                <div class="container">
+                    <div class="large-callback__inner">
+                        <div class="large-callback__row row">
+                            <div class="large-callback__left dark-wrapper">
+                                <div class="large-callback__heading heading">
+                                    <h2 class="heading__title h2-title"><span>Мы</span> всегда на связи</h2>
+                                    <div class="heading__text text-wrap little-text">
+                                        <p>Оставьте ваши данные, и мы свяжемся с вами  в ближайшее время</p>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet,
+                                    consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum
+                                    dolor sit amet, consectetur adipiscing</p>
+                            </div>
+                            
+                            <ul class="large-callback__buttons buttons">
+                                
+                                    <li class="buttons__item">
+                                        <a href="#" class="button">Написать в whatsapp <span
+                                                    class="pseudo-icon pseudo-icon__whats-up"></span></a>
+                                    </li>
+                                
+                                    <li class="buttons__item">
+                                        <a href="#" class="button">Написать в telegram <span
+                                                    class="pseudo-icon pseudo-icon__telegram"></span></a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="contact contact__section">
     <div class="contact__row row">
         <div class="row__item contact__item contact__map">
@@ -506,12 +554,12 @@
                     <ul class="buttons">
                         
                             <li class="buttons__item">
-                                <a href="#" class="button button__dark ">Написать в whatsapp <span
+                                <a href="#" class="button button__dark">Написать в whatsapp <span
                                             class="pseudo-icon pseudo-icon__whats-up"></span></a>
                             </li>
                         
                             <li class="buttons__item">
-                                <a href="#" class="button button__dark ">Написать в telegram <span
+                                <a href="#" class="button button__dark">Написать в telegram <span
                                             class="pseudo-icon pseudo-icon__telegram"></span></a>
                             </li>
                         
@@ -653,6 +701,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.js" integrity="sha512-8enKnFefzurzM5t8sFERkldg/nw+Kh8GNXLTesyT6/enZ+N1o6MMchxV3C/0G+4RrAZrE8v61EdJ+BuY6qqapA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/main.js"></script>
 <!-- navigation js -->
 <script src="js/navigation.js"></script>
