@@ -1,12 +1,12 @@
 .contact {
   padding-top: 86px;
   &__section {
-    padding-top: 83px;
+    padding-top: 43px;
     @include media(1200) {
-      padding-top: 143px;
+      padding-top: 70px;
     }
     @include media(540) {
-      padding-top: 54px;
+      padding-top: 25px;
     }
   }
   &__row {

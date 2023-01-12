@@ -25,4 +25,24 @@
       margin-right: $desktop-padding;
     }
   }
+  &__item-left-container {
+    padding-left: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    @include min-media(1921) {
+      padding-right: 0px;
+      width: 783.5px;
+    }
+    & > * {
+      margin-left: $desktop-padding;
+    }
+  }
+  &__item-right-container {
+    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    @include min-media(1921) {
+      padding-right: 0px;
+      width: 783.5px;
+    }
+    & > * {
+      margin-right: $desktop-padding;
+    }
+  }
 }

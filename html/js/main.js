@@ -74,7 +74,7 @@ $(function ($) {
     getSpeed = getComputedStyle(document.documentElement).getPropertyValue('--speed'),
     timeFunction = getComputedStyle(document.documentElement).getPropertyValue('--time-function'),
     speed = getSpeed.slice(0, getSpeed.length - 2);
-  console.log(speed);
+  // console.log(speed);
   // console.log(typeof timeFunction);
   $(heroSlider).slick({
     infinite: false,
