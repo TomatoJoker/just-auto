@@ -1,4 +1,8 @@
 .video {
+  max-width: 230px;
+  @include media(540) {
+    max-width: 125px;
+  }
   &__large {
     max-width: 389px;
     @include media(1200) {
@@ -7,10 +11,23 @@
     @include media(540) {
       max-width: 228px;
     }
+    .video__preview {
+      height: 259px;
+      @include media(1200) {
+        height: 219px;
+      }
+      @include media(540) {
+        height: 151px;
+      }
+    }
   }
   &__preview {
     position: relative;
     cursor: pointer;
+    height: 171px;
+    @include media(540) {
+      height: 102px;
+    }
     &:before {
       content: '';
       position: absolute;
