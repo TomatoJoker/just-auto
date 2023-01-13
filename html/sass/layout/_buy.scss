@@ -1,4 +1,9 @@
 .buy {
+  &__grid {
+    @include media(1200) {
+      grid-template-columns: 1fr;
+    }
+  }
   &__video {
     @include media(1200) {
       display: none;
@@ -13,7 +18,7 @@
   }
   &__step {
     @include media(1200) {
-      width: 100%;
+      max-width: 100%;
     }
     .step__top:before {
       width: 59px;

@@ -23,6 +23,9 @@
   }
   &__inner {
     padding-right: 48px;
+    @include media(540) {
+      padding-right: 30px;
+    }
   }
   &__row {
     position: relative;

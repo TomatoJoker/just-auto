@@ -25,6 +25,9 @@
   .pseudo-icon {
     margin-left: 20px;
     @include size(42);
+    @include media(540) {
+      @include size(23);
+    }
   }
   &__second {
     padding: 15px 53px;

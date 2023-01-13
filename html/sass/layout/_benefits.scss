@@ -2,6 +2,7 @@
   background: $dark-light;
   padding: 88px 0px 129px;
   position: relative;
+  z-index: -1;
   @include media(1200) {
     padding: 106px 0px 92px;
   }
@@ -61,12 +62,9 @@
   }
   $gap: 25px;
   &__grid {
-    max-width: 1122px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: $gap;
-    margin-left: auto;
-    margin-right: auto;
     @include media(1200) {
       grid-template-columns: 1fr;
     }

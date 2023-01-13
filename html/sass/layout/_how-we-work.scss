@@ -2,6 +2,10 @@
   &__inner {
     @include media(1200) {
       row-gap: 26px;
+      @include media(1200) {
+        row-gap: 42px;
+        grid-template-columns: 1fr;
+      }
     }
   }
   &__top {

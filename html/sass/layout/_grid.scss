@@ -4,9 +4,6 @@
   @include grid-col(4);
   @include grid-col(12);
   column-gap: 27px;
-  @include media(1200) {
-    row-gap: 42px;
-  }
   &__left {
     grid-column: 1 / 4;
   }
@@ -16,7 +13,7 @@
   @include media(1200) {
     &__left,
     &__right {
-      grid-column: 1 / 13;
+      grid-column: auto;
     }
   }
 }

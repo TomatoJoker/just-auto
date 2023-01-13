@@ -243,52 +243,9 @@
     }
   }
   &__dots-wrapper {
-    display: flex;
-    @include gap(column, 10px);
     position: absolute;
     bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  &__arrow {
-    width: 25px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &.slick-disabled {
-      pointer-events: none;
-      color: $second-dark;
-    }
-    @include hover {
-      color: $primary
-    }
-  }
-  &__arrow-left {
-    order: 0;
-  }
-  &__dots {
-    order: 2;
-    display: flex;
-    @include gap(column, 14px);
-    align-items: center;
-    li {
-      line-height: 0;
-    }
-    button {
-      font-size: 0;
-      @include size(15);
-      border-radius: 50%;
-      background: $second;
-      @include transition();
-    }
-    .slick-active {
-      button {
-        background: $primary;
-      }
-    }
-  }
-  &__arrow-right {
-    order: 3;
   }
 }

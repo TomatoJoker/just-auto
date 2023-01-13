@@ -1,16 +1,43 @@
 .our-work {
   $gap: 10px;
+  $mobile-gap: 5px;
   &__top {
     margin: -$gap;
+    @include media(540) {
+      margin: -$mobile-gap;
+    }
   }
   &__item {
     margin: $gap;
     line-height: 0;
+    @include media(540) {
+      margin: $mobile-gap;
+    }
+    .video__preview {
+      .icon,
+      &:before {
+        opacity: 0;
+      }
+      @include hover {
+        .icon,
+        &:before {
+          opacity: 1;
+        }
+      }
+      .icon {
+        @include media(540) {
+          @include size(45 * 2);
+        }
+      }
+    }
   }
   &__disclaimer {
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 50px;
+    @include media(1200) {
+      margin-bottom: 32px;
+    }
   }
   &__bottom {
     @include gap(column, 20px);
@@ -27,12 +54,19 @@
   &__right {
     display: flex;
     align-items: center;
+    @include media(1200) {
+      margin-top: 10px;
+      justify-content: flex-end;
+    }
   }
   &__info {
     text-align: right;
     text-transform: uppercase;
     max-width: 224px;
     margin-right: 24px;
+    @include media(540) {
+      display: none;
+    }
   }
   &__icon {
     margin-right: 34px;

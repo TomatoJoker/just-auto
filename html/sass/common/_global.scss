@@ -164,7 +164,7 @@ h3, .h3-title {
 
 h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   @include font-settings(24, 28);
-  @include media(1200) {
+  @include media(540) {
     font-size: 20px;
   }
 }
@@ -315,4 +315,10 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 b,.bold {
   font-weight: 700;
+}
+
+.small-block {
+  max-width: 1122px;
+  margin-left: auto;
+  margin-right: auto;
 }
