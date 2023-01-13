@@ -120,15 +120,16 @@ $(function ($) {
     slidesToShow: 7,
     variableWidth: true,
     waitForAnimate: false,
-    accessibility: false,
+    accessibility: true,
     speed: speed * 1.3,
     cssEase: timeFunction,
-    initialSlide: Math.round(centerSlide),
+    // initialSlide: Math.round(centerSlide),
     rows: 2,
     slideToShow: 8,
     arrows: false
   });
-  var centerSlide = $('.js-slide-free').find('.slick-slide:not(.slick-clone)').length / 2;
+  // let centerSlide = ($('.js-slide-free').find('.slick-slide:not(.slick-clone)').length) / 2;
+
   $('.js-slider-review').slick({
     slidesToShow: 2,
     prevArrow: '<button class="review__arrow review__arrow-left" type="button">' + arrowLeftSvg + '</button>',
