@@ -2,7 +2,6 @@
 
 var slideHeroLenght = jQuery('.js-hero-slide').length,
   counterHtml = '';
-// console.log(slideHeroLenght);
 for (var i = 1; i <= slideHeroLenght; i++) {
   counterHtml += "<li class=\"hero__count js-counter-slide\"><span>0".concat(i, "</span></li>");
 }
@@ -24,14 +23,14 @@ $(function ($) {
   $('.js-overlay').on('click', function () {
     burger('.js-burger-menu', this);
   });
-  var iconArrowRight = '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '   <div class="arrow">' + '       <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg>' + '   </div>' + '</button>',
-    iconArrowLeft = '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '   <div class="arrow">' + '       <svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"></path></svg>' + '   </div>' + '</button>',
-    iconClose = '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '   <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + '       <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>' + '   </svg>' + '</button>';
+  var arrowRight = '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '   <div class="arrow">' + arrowRightSvg + '   </div>' + '</button>',
+    arrowLeft = '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '   <div class="arrow">' + arrowLeftSvg + '   </div>' + '</button>',
+    iconClose = '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '   <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + closeSvg + '   </svg>' + '</button>';
   modal('.js-lightbox-first, .js-lightbox-second, .js-lightbox-third', 'modal__image-slide');
   function modal(imageModal, slideClass) {
     var close = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : iconClose;
-    var arrowRight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : iconArrowRight;
-    var arrowLeft = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : iconArrowLeft;
+    var arrowRight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowRight;
+    var arrowLeft = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : arrowLeft;
     $('[data-fancybox]').fancybox({
       smallBtn: false,
       toolbar: false
@@ -46,7 +45,6 @@ $(function ($) {
       smallBtn: true
     });
   }
-  var frame, src;
   $('.js-video-preview').on('click', function () {
     var src = $(this).attr('data-id');
     $.fancybox.open({
@@ -69,8 +67,8 @@ $(function ($) {
   var counter = '.js-counter',
     heroSlider = '.js-hero-slider',
     startSlide = 2,
-    counterItem = '.js-counter-slide',
     dotsContainer = '.js-dots',
+    counterItem = '.js-counter-slide',
     getSpeed = getComputedStyle(document.documentElement).getPropertyValue('--speed'),
     timeFunction = getComputedStyle(document.documentElement).getPropertyValue('--time-function'),
     speed = getSpeed.slice(0, getSpeed.length - 2);
@@ -83,15 +81,15 @@ $(function ($) {
     draggable: true,
     initialSlide: startSlide - 1,
     asNavFor: counter,
-    appendArrows: dotsContainer,
-    appendDots: dotsContainer,
+    appendArrows: $(dotsContainer),
+    appendDots: $(dotsContainer),
     dots: true,
-    dotsClass: 'hero__dots',
+    dotsClass: 'dots__block',
     swipe: false,
     speed: speed * 1.3,
     cssEase: timeFunction,
-    prevArrow: '<button class="hero__arrow hero__arrow-left"><svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"/></svg></button>',
-    nextArrow: '<button class="hero__arrow hero__arrow-right"><svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/></svg></button>',
+    prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
+    nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
     waitForAnimate: false,
     accessibility: false
   });
@@ -116,7 +114,6 @@ $(function ($) {
       $(counterItem).eq(index).addClass('slick-current');
     });
   }
-  var centerSlide;
   $('.js-slide-free').slick({
     infinite: true,
     swipeToSlide: true,
@@ -126,13 +123,40 @@ $(function ($) {
     accessibility: false,
     speed: speed * 1.3,
     cssEase: timeFunction,
-    initialSlide: centerSlide,
+    initialSlide: Math.round(centerSlide),
     rows: 2,
-    slideToShow: 8
+    slideToShow: 8,
+    arrows: false
   });
-  centerSlide = $('.js-slide-free').find('.slick-slide:not(.slick-clone)').length / 2;
-  console.log(centerSlide);
+  var centerSlide = $('.js-slide-free').find('.slick-slide:not(.slick-clone)').length / 2;
   $('.js-slider-review').slick({
-    slidesToShow: 2
+    slidesToShow: 2,
+    prevArrow: '<button class="review__arrow review__arrow-left" type="button">' + arrowLeftSvg + '</button>',
+    nextArrow: '<button class="review__arrow review__arrow-right" type="button">' + arrowRightSvg + '</button>',
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $('.js-slider-video').slick({
+    infinite: false,
+    dotsClass: 'dots__block',
+    speed: speed * 1.3,
+    cssEase: timeFunction,
+    slidesToShow: 2,
+    arrows: true,
+    appendArrows: $('.js-video-dots'),
+    appendDots: $('.js-video-dots'),
+    prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
+    nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
+    dots: true,
+    responsive: [{
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
 });

@@ -42,5 +42,14 @@
                 </clipPath>
             </defs>
         </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.034 23.046a1.77 1.77 0 0 0 0-2.502l-8.762-8.762 8.761-8.761A1.77 1.77 0 0 0 10.532.518L.518 10.531a1.77 1.77 0 0 0 0 2.503l10.013 10.012a1.77 1.77 0 0 0 2.502 0Z"></path>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.518.518a1.77 1.77 0 0 0 0 2.503l8.761 8.761-8.76 8.761a1.77 1.77 0 0 0 2.502 2.503l10.012-10.012a1.77 1.77 0 0 0 0-2.503L3.021.518a1.77 1.77 0 0 0-2.503 0Z"/>
+        </symbol>
+        <symbol id="icon-arrow-close" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+            <path xmlns="http://www.w3.org/2000/svg" d="M9.57373 24.4276L17.0013 17M24.4289 9.57239L16.9999 17M16.9999 17L9.57373 9.57239M17.0013 17L24.4289 24.4276" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
     </defs>
 </svg>

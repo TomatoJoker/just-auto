@@ -47,11 +47,13 @@
       top: -73px;
       right: -133px;
       background: $transparent;
-      svg {
+      .icon {
         transition: inherit;
+        fill: none;
+        stroke: currentColor;
       }
       @include hover-focus {
-        svg {
+        .icon {
           color: $primary;
         }
       }

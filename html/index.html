@@ -191,7 +191,7 @@
                     <div class="hero__counter-block js-counter">
                     </div>
                 </div>
-                <div class="hero__dots-wrapper js-dots">
+                <div class="hero__dots-wrapper dots js-dots">
                 </div>
             </section>
             <section class="how-we-work section">
@@ -276,7 +276,7 @@
             </section>
             <section class="buy section section__silver">
                 <div class="container">
-                    <div class="grid grid__col-12">
+                    <div class="buy__grid grid grid__col-12">
                         <div class="buy__video grid__left">
                             <div class="video video__large">
     <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
@@ -364,7 +364,7 @@
             </section>
             <section class="delivery section">
                 <div class="container">
-                    <div class="grid grid__col-12">
+                    <div class="delivery__inner grid grid__col-12">
                         <div class="delivery__row grid__right">
                             <div class="delivery__step step">
                                 <div class="step__top">
@@ -617,7 +617,7 @@
                         </div>
                     </div>
                     
-                    <div class="benefits__grid">
+                    <div class="benefits__grid small-block">
                         
                             <div class="benefits__item">
                                 <div class="benefits__card">
@@ -671,13 +671,93 @@
                     <a href="#" class="benefits__button button">заказать авто</a>
                 </div>
             </section>
+            <section class="more section section__silver">
+                <div class="container">
+                    <div class="more__wrapper small-block">
+                        <div class="more__top row">
+                            <div class="more__left">
+                                <div class="more__heading">
+                                    
+    <svg class="icon" width="92" height="65">
+        <use href="./i/sprite.svg#icon-youtube"></use>
+    </svg>
+
+                                    <h2 class="more__title h3-title"><span>Подробнее</span> про нашу работу</h2>
+                                </div>
+                                <p class="sub-title">Оставьте ваши данные, и мы свяжемся с вами в ближайшее время</p>
+                            </div>
+
+                            <div class="dots js-video-dots"></div>
+                        </div>
+                        <ul class="more__row js-slider-video">
+                            
+                                <li class="more__item video">
+                                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                                        <img src="./images/preview.png" width="547" height="366" alt="">
+                                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                                    </div>
+                                    <div class="video__sub-title text-wrap">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </li>
+                            
+                                <li class="more__item video">
+                                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                                        <img src="./images/preview.png" width="547" height="366" alt="">
+                                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                                    </div>
+                                    <div class="video__sub-title text-wrap">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </li>
+                            
+                                <li class="more__item video">
+                                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                                        <img src="./images/preview.png" width="547" height="366" alt="">
+                                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                                    </div>
+                                    <div class="video__sub-title text-wrap">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </li>
+                            
+                                <li class="more__item video">
+                                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                                        <img src="./images/preview.png" width="547" height="366" alt="">
+                                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                                    </div>
+                                    <div class="video__sub-title text-wrap">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="large-callback section section__silver">
     <div class="container">
         <div class="large-callback__inner">
             <div class="large-callback__row row">
                 <div class="large-callback__left dark-wrapper">
                     <div class="large-callback__heading heading">
-                        <h2 class="heading__title h2-title"><span>Мы</span> всегда на связи</h2>
+                        <h2 class="heading__title h2-title"><span>Мы</span> Хотим ответить на все вопросы</h2>
                         <div class="heading__text text-wrap little-text">
                             <p>Оставьте ваши данные, и мы свяжемся с вами  в ближайшее время</p>
                         </div>
@@ -740,7 +820,7 @@
                     </div>
                     <div class="row__item">
                         
-                        <ul class="customer__list">
+                        <ul class="customers__list">
                             
                                 <li class="customers__list-item row__item-right-container">
                                     <p class="customers__number">
@@ -1111,6 +1191,15 @@
     </div>
 </div>
 <div class="js-overlay overlay"></div>
+<script>
+    var arrowRightSvg = '<svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">' +
+            '<use href="./i/sprite.svg#icon-arrow-left">' +
+            '</svg>',
+        arrowLeftSvg = '<svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">' +
+            '<use href="./i/sprite.svg#icon-arrow-right">' +
+            '</svg>',
+        closeSvg = '<use href="./i/sprite.svg#icon-arrow-close"></use>';
+</script>
     </div>
 
 

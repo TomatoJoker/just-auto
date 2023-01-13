@@ -1,0 +1,46 @@
+.our-work {
+  $gap: 10px;
+  &__top {
+    margin: -$gap;
+  }
+  &__item {
+    margin: $gap;
+    line-height: 0;
+  }
+  &__disclaimer {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  &__bottom {
+    @include gap(column, 20px);
+  }
+  &__left {
+    max-width: 907px;
+    a {
+      color: #FF0000;
+    }
+    .icon {
+      display: inline;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__info {
+    text-align: right;
+    text-transform: uppercase;
+    max-width: 224px;
+    margin-right: 24px;
+  }
+  &__icon {
+    margin-right: 34px;
+  }
+  &__info {
+    font-weight: 700;
+  }
+  .slick-track {
+    line-height: 0;
+  }
+}
