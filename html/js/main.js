@@ -26,7 +26,7 @@ $(function ($) {
   var arrowRight = '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '   <div class="arrow">' + arrowRightSvg + '   </div>' + '</button>',
     arrowLeft = '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '   <div class="arrow">' + arrowLeftSvg + '   </div>' + '</button>',
     iconClose = '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '   <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + closeSvg + '   </svg>' + '</button>';
-  modal('.js-lightbox-first, .js-lightbox-second, .js-lightbox-third', 'modal__image-slide');
+  modal('.js-lightbox-first, .js-lightbox-second, .js-lightbox-third, .js-lightbox-fourth', 'modal__image-slide');
   function modal(imageModal, slideClass) {
     var close = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : iconClose;
     var arrowRight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowRight;
