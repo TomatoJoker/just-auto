@@ -50,6 +50,9 @@
     .icon {
       display: inline;
     }
+    .button {
+      flex-shrink: 0;
+    }
   }
   &__right {
     display: flex;
