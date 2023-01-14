@@ -12,18 +12,11 @@
     line-height: 0;
     @include media(540) {
       margin: $mobile-gap;
+      img {
+        height: 102px;
+      }
     }
     .video__preview {
-      .icon,
-      &:before {
-        opacity: 0;
-      }
-      @include hover {
-        .icon,
-        &:before {
-          opacity: 1;
-        }
-      }
       .icon {
         @include media(540) {
           @include size(45 * 2);
