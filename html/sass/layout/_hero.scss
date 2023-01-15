@@ -13,6 +13,18 @@
   @include media(540) {
     height: 558px;
   }
+  &__padding-top {
+    padding-top: 161px;
+    @include media(540) {
+      padding-top: 89px;
+    }
+  }
+  &__padding-bottom {
+    padding-bottom: 88px;
+    @include media(540) {
+      padding-bottom: 73px;
+    }
+  }
   &__slider {
     .slick-track {
       display: flex;
@@ -57,10 +69,42 @@
   }
   &__content-inner {
     display: flex;
+    flex-direction: column;
   }
   &__title-wrapper {
     margin-top: auto;
     margin-bottom: 23px;
+    width: 100%;
+    @include media(540) {
+      max-width: 280px;
+    }
+  }
+  &__info-block {
+    position: absolute;
+    display: flex;
+    @include gap(column, 101px);
+    bottom: 0px;
+    right: 0px;
+    padding-right: $desktop-padding;
+    @include media(1200) {
+      position: static;
+      padding-bottom: 0px;
+      margin-top: 67px;
+    }
+    @include media(540) {
+      display: none;
+    }
+  }
+  &__info-title {
+    @include font-settings(20, 24);
+  }
+  &__info-counter {
+    margin-bottom: 24px;
+  }
+  &__info-row {
+    display: flex;
+    @include gap(column, 10px);
+    align-items: center;
   }
   &__title-counter {
     display: flex;
@@ -91,6 +135,9 @@
     display: flex;
     align-items: center;
     @include gap(column, 85px);
+    @include media(1200) {
+      @include gap(column, 40px);
+    }
     @include media(540) {
       margin-top: 33px;
       flex-direction: row-reverse;
@@ -126,18 +173,6 @@
     z-index: 2;
     top: 0px;
     left: 0px;
-  }
-  &__padding-top {
-    padding-top: 161px;
-    @include media(540) {
-      padding-top: 89px;
-    }
-  }
-  &__padding-bottom {
-    padding-bottom: 88px;
-    @include media(540) {
-      padding-bottom: 73px;
-    }
   }
   &__upper {
     z-index: 2;
