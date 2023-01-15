@@ -66,7 +66,7 @@ $(function ($) {
 
   var counter = '.js-counter',
     heroSlider = '.js-hero-slider',
-    startSlide = 2,
+    startSlide = 1,
     dotsContainer = '.js-dots',
     counterItem = '.js-counter-slide',
     getSpeed = getComputedStyle(document.documentElement).getPropertyValue('--speed'),
