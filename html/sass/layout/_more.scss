@@ -9,6 +9,9 @@
     .slick-list {
       overflow: visible;
     }
+    @include media(1200) {
+      overflow: hidden;
+    }
   }
   &__item {
     max-width: none;
