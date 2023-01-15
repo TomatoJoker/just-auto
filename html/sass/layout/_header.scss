@@ -144,52 +144,84 @@
     @include media(540) {
       display: none;
     }
-  }
-  &__lang-list {
-    $padding: 15px;
-    padding: 12px $padding;
-    border-radius: 10px;
-    background: $light;
-    border: 1px solid $dark;
-    position: absolute;
-    bottom: -5px;
-    transform: translateY(100%) scale(0);
-    visibility: hidden;
-    pointer-events: none;
-    left: -$padding;
-    @include transition;
-    opacity: 0;
-    &.is-open {
-      transform: translateY(100%) scale(1);
-      .header__lang {
+    .dropdown,
+    .wpml-ls-legacy-dropdown {
+      width: auto;
+      &__inner,
+      .wpml-ls-current-language {
+        @include hover {
+          .icon,
+          .js-wpml-ls-item-toggle:after {
+            transform: translateY(-3px) scaleY(-1);
+          }
+          .dropdown__lang-list,
+          .wpml-ls-sub-menu {
+            transform: translateY(100%) scale(1);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+            .header__lang,
+            .wpml-ls-item a {
+              pointer-events: auto;
+            }
+          }
+        }
+      }
+      &__lang-list,
+      .wpml-ls-sub-menu {
+        $padding: 15px;
+        padding: 12px $padding;
+        border-radius: 10px;
+        background: $light;
+        border: 1px solid $dark;
+        position: absolute;
+        bottom: -5px;
+        top: auto;
+        right: auto;
+        transform: translateY(100%) scale(0);
+        visibility: hidden;
+        pointer-events: none;
+        left: -$padding;
+        @include transition;
+        opacity: 0;
+        color: $dark;
+      }
+      &__lang,
+      .wpml-ls-item a {
+        pointer-events: none;
+        background: $transparent;
+        border: none;
+        color: inherit;
+        padding: 0px;
+        border: none;
+        background: $transparent;
+      }
+      &__lang-active,
+      .wpml-ls-item-toggle {
+        display: flex;
+        align-items: center;
         pointer-events: auto;
+        @include gap(column, 4px);
+        background: $transparent !important;
+        color: inherit;
+        @include media(1200) {
+          color: $primary;
+        }
+        .icon,
+        &:after {
+          transform: translateY(3px);
+          @include transition;
+          position: static;
+        }
+      }
+      &__link,
+      &__lang,
+      .wpml-ls-item,
+      .wpml-ls-item a {
+        text-transform: uppercase;
+        @include hover-focus-link;
       }
     }
-  }
-  &__lang {
-    pointer-events: none;
-  }
-  &__lang-active {
-    display: flex;
-    align-items: center;
-    pointer-events: auto;
-    @include gap(column, 4px);
-    @include media(1200) {
-      color: $primary;
-    }
-    .icon {
-      @include transition;
-    }
-    &.is-active {
-      .icon {
-        transform: scaleY(-1);
-      }
-    }
-  }
-  &__link,
-  &__lang {
-    text-transform: uppercase;
-    @include hover-focus-link;
   }
   &__modal {
     color: $dark;
