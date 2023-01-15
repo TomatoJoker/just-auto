@@ -33,9 +33,12 @@
     }
   }
   &__left {
-    p {
+    p, pre {
       color: $primary;
       text-transform: uppercase;
+      max-width: 100%;
+      overflow: hidden;
+      font: inherit;
     }
   }
   &__heading {
