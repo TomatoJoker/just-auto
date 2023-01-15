@@ -65,8 +65,14 @@
   }
   &__arrow-left {
     left: -30px;
+    @include media(540) {
+      left: 0px;
+    }
   }
   &__arrow-right {
     right: -30px;
+    @include media(540) {
+      right: 0px;
+    }
   }
 }
