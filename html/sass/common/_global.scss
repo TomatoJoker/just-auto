@@ -143,6 +143,9 @@ h1, .h1-title {
   @include media(1200) {
     font-size: 43px;
   }
+  @include media(540) {
+    font-size: 32px;
+  }
 }
 
 h2, .h2-title {

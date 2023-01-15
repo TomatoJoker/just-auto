@@ -1,5 +1,4 @@
 .contact {
-  padding-top: 86px;
   &__section {
     padding-top: 43px;
     @include media(1200) {
@@ -71,6 +70,9 @@
   &__form {
     margin-top: 10px;
     margin-bottom: -5px;
+    form {
+      align-items: flex-start;
+    }
     .form__button {
       margin: 12px 0px 0px;
     }
@@ -102,6 +104,15 @@
     .button {
       justify-content: center;
       text-align: center;
+    }
+  }
+  &__page-heading {
+    margin-bottom: 86px;
+    @include media(1200) {
+      margin-bottom: 50px;
+    }
+    @include media(540) {
+      margin-bottom: 42px;
     }
   }
 }

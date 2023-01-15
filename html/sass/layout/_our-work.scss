@@ -2,6 +2,30 @@
   padding-top: 0px;
   $gap: 10px;
   $mobile-gap: 5px;
+  &__page {
+    padding-bottom: 157px;
+    @include media(1200) {
+      padding-bottom: 117px;
+    }
+    @include media(540) {
+      padding-bottom: 51px;
+    }
+    .card {
+      padding: 25px;
+      margin-top: 58px;
+      @include media(1200) {
+        padding-top: 43px;
+        padding-bottom: 43px;
+      }
+      @include media(540) {
+        padding: 0px;
+        background: $transparent;
+      }
+    }
+  }
+  &__page-heading {
+    margin-bottom: 26px;
+  }
   &__top {
     margin: -$gap;
     @include media(540) {
@@ -11,6 +35,10 @@
   &__item {
     margin: $gap;
     line-height: 0;
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
     @include media(540) {
       margin: $mobile-gap;
       img {
@@ -33,6 +61,10 @@
       margin-bottom: 32px;
     }
   }
+  &__top-disclaimer {
+    text-transform: uppercase;
+    margin-bottom: 31px;
+  }
   &__bottom {
     @include gap(column, 20px);
   }
@@ -40,6 +72,25 @@
     max-width: 907px;
     a {
       color: #FF0000;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        transform: scaleX(0);
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transition: inherit;
+        transform-origin: left;
+        position: absolute;
+        bottom: 2px;
+        left: 0px;
+      }
+      @include hover-focus {
+        &:after {
+          transform: scaleX(1);
+        }
+      }
     }
     .icon {
       display: inline;
@@ -73,5 +124,48 @@
   }
   .slick-track {
     line-height: 0;
+  }
+  &__page-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 33px;
+    @include media(1640) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include media(1200) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include media(1000) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include media(540) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(540) {
+      margin-bottom: 15px;
+    }
+    .our-work__item {
+      max-width: 100%;
+      img {
+        width: 100%;
+      }
+      img,
+      .video__preview {
+        @include media(1200) {
+          @include min-media(1001) {
+            height: 157px;
+          }
+        }
+        @include media(1000) {
+          @include min-media(541) {
+            height: 127px;
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
 }
