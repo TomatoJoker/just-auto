@@ -70,6 +70,7 @@
   &__content-inner {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   &__title-wrapper {
     margin-top: auto;
@@ -89,7 +90,7 @@
     @include media(1200) {
       position: static;
       padding-bottom: 0px;
-      margin-top: 67px;
+      margin-top: 44px;
     }
     @include media(540) {
       display: none;
