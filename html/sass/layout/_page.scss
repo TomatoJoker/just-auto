@@ -1,0 +1,25 @@
+.page {
+  padding-top: 54px;
+  @include media(1200) {
+    padding-top: 50px;
+  }
+  @include media(540) {
+    padding-top: 15px;
+  }
+  &__title {
+    max-width: 380px;
+    text-wrap: normal;
+    @include media(1200) {
+      max-width: 280px;
+    }
+    @include media(540) {
+      max-width: 180px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+  &__text {
+    max-width: 651px;
+  }
+}
