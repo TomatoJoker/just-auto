@@ -252,10 +252,37 @@
   }
   &__mobile-lang {
     margin-top: 45px;
-    display: flex;
-    @include gap(column, 8px);
+    
     .header__lang {
       pointer-events: auto;
+    }
+  }
+  &__mobile-lang {
+    margin-top: 45px;
+    .wpml-ls-sub-menu {
+      visibility: visible;
+    }
+    .wpml-ls-legacy-dropdown .wpml-ls-current-language {
+      display: flex;
+      @include gap(column, 8px);
+    }
+    .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle {
+      color: $primary;
+      border-right: 1px solid $dark;
+      padding-right: 8px;
+      &::after {
+        content: none;
+      }
+    }
+    .wpml-ls-legacy-dropdown .wpml-ls-sub-menu {
+      position: static;
+      border: none;
+    }
+    .wpml-ls-legacy-dropdown a {
+      color: $dark;
+      background: $transparent !important;
+      padding: 0px;
+      border: none;
     }
   }
   &__mobile-item {

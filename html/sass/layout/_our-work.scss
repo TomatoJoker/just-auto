@@ -2,8 +2,10 @@
   padding-top: 0px;
   $gap: 10px;
   $mobile-gap: 5px;
+  overflow: hidden;
   &__page {
     padding-bottom: 157px;
+    overflow: visible;
     @include media(1200) {
       padding-bottom: 117px;
     }

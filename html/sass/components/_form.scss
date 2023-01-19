@@ -1,8 +1,12 @@
 .form {
-  form {
+  form,
+  form p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    br {
+      display: none;
+    }
   }
   &__input {
     margin-bottom: 3px;

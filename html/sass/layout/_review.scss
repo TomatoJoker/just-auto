@@ -62,17 +62,21 @@
     @include hover {
       color: $dark;
     }
+    @include media(540) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   &__arrow-left {
     left: -30px;
     @include media(540) {
-      left: 0px;
+      left: -10px;
     }
   }
   &__arrow-right {
     right: -30px;
     @include media(540) {
-      right: 0px;
+      right: -10px;
     }
   }
 }

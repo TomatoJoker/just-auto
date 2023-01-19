@@ -70,7 +70,8 @@
   &__form {
     margin-top: 10px;
     margin-bottom: -5px;
-    form {
+    form,
+    form p {
       align-items: flex-start;
     }
     .form__button {

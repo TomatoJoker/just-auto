@@ -56,16 +56,16 @@
             <div class="header__right">
                 <button type="button" data-fancybox data-src="#order-form" class="header__link">Заказать авто</button>
                 
-                <div class="header__dropdown js-dropdown-block">
+                <div class="header__dropdown">
                     <div class="dropdown">
                         <div class="dropdown__inner">
-                            <button class="dropdown__lang dropdown__lang-active js-button-dropdown">
+                            <button class="dropdown__lang dropdown__lang-active">
                                 EN 
     <svg class="icon" width="9" height="8">
         <use href="./i/sprite.svg#icon-arrow-down"></use>
     </svg>
 </button>
-                            <ul class="dropdown__lang-list js-dropdown-item">
+                            <ul class="dropdown__lang-list">
                                 <li class="dropdown__lang-item"><a class="dropdown__lang" href="#">RU</a></li>
                             </ul>
                         </div>
@@ -105,16 +105,17 @@
             
         </ul>
         
-        <ul class="header__mobile-lang">
-            
-                <li class="header__mobile-item"><a class="header__lang header__lang-active"
-                                                   href="#">EN</a></li>
-            
-                <li class="header__mobile-item"><a class="header__lang"
-                                                   href="#">RU</a></li>
-            
-        </ul>
-
+        <div class="header__mobile-lang">
+            <ul class="header__mobile-row">
+                
+                    <li class="header__mobile-item"><a class="header__lang header__lang-active"
+                                                       href="#">EN</a></li>
+                
+                    <li class="header__mobile-item"><a class="header__lang"
+                                                       href="#">RU</a></li>
+                
+            </ul>
+        </div>
     </div>
 </header>
         <main class="main">
@@ -984,24 +985,24 @@
                     </div>
                     <ul class="review__row js-slider-review">
                         
-                        <li class="review__item card">
-                            <img class="review__image" src="./images/customer.jpg" width="40" height="40" alt="">
-                            <div class="review__right">
-                                <div class="review__top">
-                                    <h3 class="review__card-title h4-title">Имён Фамильян</h3>
+                        <li class="review__item review-item card">
+                            <img class="review-item__image" src="./images/customer.jpg" width="40" height="40" alt="">
+                            <div class="review-item__right">
+                                <div class="review-item__top">
+                                    <h3 class="review-item__card-title h4-title">Имён Фамильян</h3>
                                     <p>Очень доволен качеством. Звукоизоляция на уровне. Купил верхний этаж. Благодаря
                                         крыше не жарко летом и не холодно зимой. Есть минус - высокий клиренс, боюсь
                                         высоты, но детям нравиться вид на море и детскую площадку.</p>
                                 </div>
-                                <ul class="review__bottom">
+                                <ul class="review-item__bottom">
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-1.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-1.jpg" width="124" height="80" alt="">
                                         </a>
                                     </li>
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-2.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-2.jpg" width="124" height="80" alt="">
                                         </a>
@@ -1011,24 +1012,24 @@
                             </div>
                         </li>
                         
-                        <li class="review__item card">
-                            <img class="review__image" src="./images/customer.jpg" width="40" height="40" alt="">
-                            <div class="review__right">
-                                <div class="review__top">
-                                    <h3 class="review__card-title h4-title">Имён Фамильян</h3>
+                        <li class="review__item review-item card">
+                            <img class="review-item__image" src="./images/customer.jpg" width="40" height="40" alt="">
+                            <div class="review-item__right">
+                                <div class="review-item__top">
+                                    <h3 class="review-item__card-title h4-title">Имён Фамильян</h3>
                                     <p>Очень доволен качеством. Звукоизоляция на уровне. Купил верхний этаж. Благодаря
                                         крыше не жарко летом и не холодно зимой. Есть минус - высокий клиренс, боюсь
                                         высоты, но детям нравиться вид на море и детскую площадку.</p>
                                 </div>
-                                <ul class="review__bottom">
+                                <ul class="review-item__bottom">
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-1.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-1.jpg" width="124" height="80" alt="">
                                         </a>
                                     </li>
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-2.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-2.jpg" width="124" height="80" alt="">
                                         </a>
@@ -1038,24 +1039,24 @@
                             </div>
                         </li>
                         
-                        <li class="review__item card">
-                            <img class="review__image" src="./images/customer.jpg" width="40" height="40" alt="">
-                            <div class="review__right">
-                                <div class="review__top">
-                                    <h3 class="review__card-title h4-title">Имён Фамильян</h3>
+                        <li class="review__item review-item card">
+                            <img class="review-item__image" src="./images/customer.jpg" width="40" height="40" alt="">
+                            <div class="review-item__right">
+                                <div class="review-item__top">
+                                    <h3 class="review-item__card-title h4-title">Имён Фамильян</h3>
                                     <p>Очень доволен качеством. Звукоизоляция на уровне. Купил верхний этаж. Благодаря
                                         крыше не жарко летом и не холодно зимой. Есть минус - высокий клиренс, боюсь
                                         высоты, но детям нравиться вид на море и детскую площадку.</p>
                                 </div>
-                                <ul class="review__bottom">
+                                <ul class="review-item__bottom">
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-1.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-1.jpg" width="124" height="80" alt="">
                                         </a>
                                     </li>
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-2.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-2.jpg" width="124" height="80" alt="">
                                         </a>
@@ -1065,24 +1066,24 @@
                             </div>
                         </li>
                         
-                        <li class="review__item card">
-                            <img class="review__image" src="./images/customer.jpg" width="40" height="40" alt="">
-                            <div class="review__right">
-                                <div class="review__top">
-                                    <h3 class="review__card-title h4-title">Имён Фамильян</h3>
+                        <li class="review__item review-item card">
+                            <img class="review-item__image" src="./images/customer.jpg" width="40" height="40" alt="">
+                            <div class="review-item__right">
+                                <div class="review-item__top">
+                                    <h3 class="review-item__card-title h4-title">Имён Фамильян</h3>
                                     <p>Очень доволен качеством. Звукоизоляция на уровне. Купил верхний этаж. Благодаря
                                         крыше не жарко летом и не холодно зимой. Есть минус - высокий клиренс, боюсь
                                         высоты, но детям нравиться вид на море и детскую площадку.</p>
                                 </div>
-                                <ul class="review__bottom">
+                                <ul class="review-item__bottom">
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-1.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-1.jpg" width="124" height="80" alt="">
                                         </a>
                                     </li>
                                     
-                                    <li class="review__image">
+                                    <li class="review-item__image">
                                         <a href="./images/review-2.jpg" class="js-lightbox-third" data-fancybox="image">
                                             <img src="./images/review-2.jpg" width="124" height="80" alt="">
                                         </a>
