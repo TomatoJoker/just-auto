@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "base/base";
+@import "layout/page";
+
+.privacy {
+  padding-bottom: 146px;
+  @include media(1200) {
+    padding-bottom: 80px;
+  }
+  &__title {
+    margin-bottom: 93px;
+    @include media(1200) {
+      margin-bottom: 40px;
+    }
+    @include media(540) {
+      font-size: 22px;
+    }
+  }
+  &__col {
+    max-width: 611px;
+  }
+}

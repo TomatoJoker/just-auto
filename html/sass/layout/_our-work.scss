@@ -104,6 +104,7 @@
   &__right {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     @include media(1200) {
       margin-top: 10px;
       justify-content: flex-end;
@@ -130,7 +131,6 @@
   &__page-row {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin-bottom: 33px;
     @include media(1640) {
       grid-template-columns: repeat(6, 1fr);
     }
@@ -167,6 +167,7 @@
     }
   }
   &__button {
+    margin-top: 33px;
     margin-left: 50%;
     transform: translateX(-50%);
   }

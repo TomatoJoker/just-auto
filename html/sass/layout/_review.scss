@@ -18,28 +18,8 @@
   }
   &__item {
     margin: $gap;
-    padding: 38px 50px;
-    display: flex !important;
-    @include gap(column, 28px);
-    @include media(540) {
-      padding: 19px 22px 30px;
-      flex-direction: column;
-    }
   }
-  &__card-title {
-    margin-bottom: 4px;
-  }
-  &__image {
-    border-radius: 10px;
-    @include media(540) {
-      margin-bottom: 17px;
-    }
-  }
-  &__bottom {
-    margin-top: 22px;
-    display: flex;
-    @include gap(column, 8px)
-  }
+
   &__button {
     margin-top: 74px;
     left: 50%;

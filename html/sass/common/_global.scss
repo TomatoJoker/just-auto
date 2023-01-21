@@ -29,10 +29,6 @@ a {
 }
 
 .content {
-  img {
-    display: block;
-    margin: 0 auto 46px;
-  }
 
   h1 {
     margin-bottom: 20px;
@@ -50,6 +46,36 @@ a {
     margin-bottom: 14px;
   }
 
+  p {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+      @include media(1200) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    @include hover-focus {
+      &:before {
+        transform: scale(0);
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0px;
+      transform-origin: left;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transition: inherit;
+      transform: scale(1);
+    }
+  }
+
   ol,
   ul {
     margin-bottom: 32px;
@@ -57,29 +83,27 @@ a {
 
   li {
     margin-bottom: 16px;
-    
-    font-size: 14px;
-    line-height: 20px;
   }
 
   ul {
     li {
+      padding-left: 25px;
       position: relative;
-      padding-left: 18px;
-
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
       &:before {
-        content: '';
         position: absolute;
-        top: 6px;
-        left: 0;
-        @include size(10px);
-        border-radius: 50%;
+        content: '';
+        @include size(4);
+        border-radius: 50px;
+        background: currentColor;
+        color: $primary;
+        top: 50%;
+        left: 12.5px;
+        transform: translate(-50%, -50%);
       }
     }
-  }
-
-  a {
-    
   }
 
   ol {
@@ -87,7 +111,7 @@ a {
 
     li {
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
 
       &:before {
         counter-increment: myCounter;
