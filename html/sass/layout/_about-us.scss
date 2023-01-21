@@ -1,5 +1,93 @@
 .about-us {
   &__page-heading {
     margin-bottom: 54px;
+    @include media(1200) {
+      margin-bottom: 36px;
+    }
+    @include media(540) {
+      margin-bottom: 26px;
+    }
+  }
+  &__row {
+    display: flex;
+    @include gap(column, 24px);
+    @include media(1200) {
+      flex-direction: column;
+      @include gap(row, 45px);
+    }
+    @include media(540) {
+      @include gap(row, 26px);
+    }
+  }
+  &__image {
+    flex-grow: 1;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+      @include media(1200) {
+        height: auto;
+      }
+    }
+  }
+  &__right {
+    max-width: 396px;
+    @include media(1200) {
+      max-width: 100%;
+      display: flex;
+      @include gap(column, 76px);
+    }
+    @include media(540) {
+      flex-direction: column;
+    }
+  }
+  &__autor-img {
+    img {
+      border-radius: 10px;
+      @include media(540) {
+        @include size(40);
+      }
+    }
+  }
+  &__autor {
+    margin-top: 14px;
+  }
+  &__text {
+    margin-top: 4px;
+    @include media(540) {
+      max-width: 242px;
+    }
+    p {
+      @include media(540) {
+        font-size: 12px;
+      }
+    }
+  }
+  &__video {
+    margin-top: 36px;
+    @include media(1200) {
+      flex-shrink: 0;
+      margin-top: 0px;
+    }
+    @include media(540) {
+      max-width: 134px;
+      margin-left: auto;
+      margin-top: 19px;
+    }
+    .video {
+      max-width: 256px;
+      &__preview {
+        height: 202px;
+        @include media(540) {
+          height: 106px;
+        }
+      }
+      .icon {
+        @include media(540) {
+          @include size(105);
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <title>Наши работы</title>
+  <link rel="preload" href="./fonts/Rubik/Rubik-Regular.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="preload" href="./fonts/Rubik/Rubik-Bold.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.css" integrity="sha512-a/02IBOTwuaufMgBLYpBKvO9y01S8rmk0l0+xSxQfI8PDgmxC1O/DJaH8PfAL43iTqed/V+q6OsCNH+o963PlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="./css/common.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/trucks.min.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+    <header class="header">
+    <div class="container">
+        <div class="header__inner row">
+            <nav class="header__left">
+                <button class="header__burger js-burger-menu">
+                    <span></span>
+                </button>
+                
+                    <a href="./index.html" class="header__logo logo">
+                        <img src="./images/logo-dark.svg" alt="Лого" width="123" height="48">
+                    </a>
+                
+                
+                <!--
+                                    <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'header-menu',
+                            'menu_id' => 'primary-menu-1',
+                            'container' => false,
+                            'menu_class' => 'header__desktop-menu menu',
+                            'menu_item_class' => 'menu__item',
+                        )
+                    ); ?>
+                 -->
+                <ul class="header__desktop-menu menu">
+                    
+                        <li class="menu__item"><a href="#">Грузовые автомобили</a></li>
+                    
+                        <li class="menu__item"><a href="#">Наши работы</a></li>
+                    
+                        <li class="menu__item"><a href="#">Отзывы</a></li>
+                    
+                        <li class="menu__item"><a href="#">Калькулятора</a></li>
+                    
+                        <li class="menu__item"><a href="#">Контакты</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header__right">
+                <button type="button" data-fancybox data-src="#order-form" class="header__link">Заказать авто</button>
+                
+                    <ul class="header__social social">
+                        <li><a href="#" class="social__item pseudo-icon pseudo-icon__whats-up"
+                               aria-label="Whats up"></a></li>
+                        <li><a href="#" class="social__item pseudo-icon pseudo-icon__telegram"
+                               aria-label="Telegram"></a></li>
+                    </ul>
+                
+                <div class="header__dropdown">
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            <button class="dropdown__lang dropdown__lang-active">
+                                EN 
+    <svg class="icon" width="9" height="8">
+        <use href="./i/sprite.svg#icon-arrow-down"></use>
+    </svg>
+</button>
+                            <ul class="dropdown__lang-list">
+                                <li class="dropdown__lang-item"><a class="dropdown__lang" href="#">RU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__modal js-header-modal">
+        
+            <a href="./index.html" class="logo">
+                <img src="./images/logo-dark.svg" alt="Лого" width="123" height="48">
+            </a>
+        
+        <!--
+                    <?php wp_nav_menu(
+        array(
+            'theme_location' => 'header-menu',
+            'menu_id' => 'primary-menu-1',
+            'container' => false,
+            'menu_class' => 'header__mobile-menu menu',
+            'menu_item_class' => 'menu__item',
+        )
+    ); ?>
+ -->
+        <ul class="header__mobile-menu menu">
+            
+                <li class="menu__item"><a href="#">Грузовые автомобили</a></li>
+            
+                <li class="menu__item"><a href="#">Наши работы</a></li>
+            
+                <li class="menu__item"><a href="#">Отзывы</a></li>
+            
+                <li class="menu__item"><a href="#">Калькулятора</a></li>
+            
+                <li class="menu__item"><a href="#">Контакты</a></li>
+            
+        </ul>
+        
+        <div class="header__mobile-lang">
+            <ul class="header__mobile-row">
+                
+                    <li class="header__mobile-item"><a class="header__lang header__lang-active"
+                                                       href="#">EN</a></li>
+                
+                    <li class="header__mobile-item"><a class="header__lang"
+                                                       href="#">RU</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="trucks page">
+            <div class="container">
+                <div class="trucks__page-heading page__heading">
+                    <h1 class="page__title h1-title">Грузовые автомобили</h1>
+                    <div class="page__text text-wrap">
+                        <p>Авто из Германии Авто из ГерманииАвто из ГерманииАвто из ГерманииАвто из ГерманииАвто из
+                            Германии</p>
+                    </div>
+                </div>
+                <img class="trucks__img" src="./images/trucks.jpg" width="1638" height="587" alt="">
+            </div>
+        </section>
+        <section class="goals section">
+            <div class="container">
+                <div class="goals__inner grid grid__col-12">
+                    <div class="grid__left goals__title">
+                        <h2 class="h2-title">Цель нашей работы</h2>
+                    </div>
+                    <ul class="grid__right goals__row">
+                       
+                           <li class="goals__step step">
+                               <div class="step__top">
+                                   <h3 class="step__title h4-title">Осмотр автомобиля</h3>
+                                   <div class="step__arrow-decor arrow">
+                                       
+    <svg class="icon" width="13" height="21">
+        <use href="./i/sprite.svg#icon-arrow-decor"></use>
+    </svg>
+
+                                   </div>
+                               </div>
+                               <div class="step__text text-wrap">
+                                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                       eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                       montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                       pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                       vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                       venenatis vitae, just</p>
+                               </div>
+                           </li>
+                        
+                           <li class="goals__step step">
+                               <div class="step__top">
+                                   <h3 class="step__title h4-title">Осмотр автомобиля</h3>
+                                   <div class="step__arrow-decor arrow">
+                                       
+    <svg class="icon" width="13" height="21">
+        <use href="./i/sprite.svg#icon-arrow-decor"></use>
+    </svg>
+
+                                   </div>
+                               </div>
+                               <div class="step__text text-wrap">
+                                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                       eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                       montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                       pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                       vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                       venenatis vitae, just</p>
+                               </div>
+                           </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="goals__bottom">
+                
+                <ul class="goals__bottom-row">
+                    
+                        <li class="goals__item">
+                            <h3 class="h4-title">Авто из Германии в страны снг</h3>
+                        </li>
+                    
+                        <li class="goals__item">
+                            <h3 class="h4-title">10 лет 2300 авто</h3>
+                        </li>
+                    
+                        <li class="goals__item">
+                            <h3 class="h4-title">Осмотр авто перед покупкой</h3>
+                        </li>
+                    
+                        <li class="goals__item">
+                            <h3 class="h4-title">Осмотр авто перед покупкой</h3>
+                        </li>
+                    
+                </ul>
+            </div>
+        </section>
+        <section class="our-work section">
+    <ul class="our-work__top js-slide-free">
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <a href="/images/preview.png" class="js-lightbox-fourth" data-type="image">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                    </a>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+            
+                <li class="our-work__item video">
+                    <div class="video__preview js-video-preview" data-id="r61bHkE-8lA">
+                        <img src="./images/preview.png" width="230" height="172" alt="">
+                        
+    <svg class="icon" width="152" height="152">
+        <use href="./i/sprite.svg#icon-play"></use>
+    </svg>
+
+                    </div>
+                </li>
+            
+        
+    </ul>
+    <div class="container">
+        <div class="our-work__disclaimer text-wrap little-text">
+            <p>*Все это вживую, реальные осмотры для реальных клиентов.</p>
+        </div>
+        <div class="our-work__bottom link-block row card">
+            <p class="our-work__left h4-title">Как происходят осмотры, тест-драйвы авто и его дальнейшая покупка, вы можете
+                посмотреть на нашем канале <a href="#">YouTube</a>.
+    <svg class="icon" width="25" height="18">
+        <use href="./i/sprite.svg#icon-youtube"></use>
+    </svg>
+</p>
+            <div class="our-work__right">
+                <p class="our-work__info medium-text">Нажать что бы увидеть больше работ</p>
+                
+    <svg class="icon our-work__icon" width="27" height="35">
+        <use href="./i/sprite.svg#icon-picer"></use>
+    </svg>
+
+                <a href="#" class="button">Наши работы</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                
+                    <a class="footer__logo logo" href="./index.html">
+                        <img src="./images/logo.svg" alt="Лого" width="123" height="48">
+                    </a>
+                
+                <h4 class="h4-title footer__sub-title">
+                    Мы поможем вам купить автомобиль из германии
+                </h4>
+            </div>
+            <!--
+                    <?php wp_nav_menu(
+        array(
+            'theme_location' => 'footer__list menu',
+            'menu_id' => 'footer-menu',
+            'menu_class' => 'footer__menu footer__menu-post',
+            'container' => 'nav',
+            'menu_item_class' => 'footer__link menu__item'
+        )
+    );
+    ?>
+-->
+            <nav>
+                <ul class="footer__list menu">
+                    
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Грузовые автомобили</a>
+                        </li>
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Наши работы</a>
+                        </li>
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Отзывы</a>
+                        </li>
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Пользовательское соглашение</a>
+                        </li>
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Калькулятора</a>
+                        </li>
+                    
+                        <li class="footer__link menu__item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    
+                </ul>
+            </nav>
+            <div class="footer__right">
+                <div class="address">
+                    <address class="address__item footer__address-item">
+                        <div class="address__icon-wrapper">
+                            
+    <svg class="icon footer__icon" width="12" height="16">
+        <use href="./i/sprite.svg#icon-map"></use>
+    </svg>
+
+                        </div>
+                        <p class="address__text footer__text">Германия, город ровных дорог, улица прямых решений,
+                            офисный дом 5, зал с
+                            троном 4</p>
+                    </address>
+                    <address class="address__item footer__address-item">
+                        <div class="address__icon-wrapper">
+                            
+    <svg class="icon footer__icon" width="18" height="18">
+        <use href="./i/sprite.svg#icon-phone"></use>
+    </svg>
+
+                        </div>
+                        <ul>
+                            <li><a href="tel:+077774456134"
+                                   class="address__text footer__text address__phone footer__phone">+07 777 44 56 134</a>
+                            </li>
+                            <li><a href="tel:+077774456134"
+                                   class="address__text footer__text address__phone footer__phone">+07 777 44 56 134</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <ul class="footer__social social">
+                    <li><a href="#" class="social__item pseudo-icon pseudo-icon__whats-up" aria-label="Whats up"></a>
+                    </li>
+                    <li><a href="#" class="social__item pseudo-icon pseudo-icon__telegram" aria-label="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="order-form">
+    <div class="modal__top heading heading__small">
+        <h3 class="heading__title h4-title">Заказать авто</h3>
+        <div class="sub-title">
+            <p>Оставьте свои данные и мы свяжемся с вами в ближайшее время</p>
+        </div>
+    </div>
+    <div class="form">
+        <form action="">
+            <p><input class="input form__input" type="text" placeholder="имя"></p>
+            <p><input class="input form__input" type="text" placeholder="телефон"></p>
+            <p><input class="button button__second form__button" type="submit" value="Отправить"></p>
+        </form>
+    </div>
+    <span class="modal__separate sub-title">или</span>
+    <div class="modal__bottom sub-title">
+        <p>Свяжтесь с нами, удобным для Вас способом:</p>
+        <ul class="modal__social social">
+            <li>
+                <a href="#" class="social__item pseudo-icon pseudo-icon__whats-up" aria-label="Whats up"></a>
+            </li>
+            <li>
+                <a href="#" class="social__item pseudo-icon pseudo-icon__telegram" aria-label="Telegram"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="js-overlay overlay"></div>
+<script>
+    var arrowRightSvg = '<svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">' +
+            '<use href="./i/sprite.svg#icon-arrow-left">' +
+            '</svg>',
+        arrowLeftSvg = '<svg class="icon" width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">' +
+            '<use href="./i/sprite.svg#icon-arrow-right">' +
+            '</svg>',
+        closeSvg = '<use href="./i/sprite.svg#icon-arrow-close"></use>';
+</script>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.js" integrity="sha512-8enKnFefzurzM5t8sFERkldg/nw+Kh8GNXLTesyT6/enZ+N1o6MMchxV3C/0G+4RrAZrE8v61EdJ+BuY6qqapA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/main.js"></script>
+<!-- navigation js -->
+<script src="js/navigation.js"></script>
+</body>
+</html>

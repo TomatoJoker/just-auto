@@ -1,7 +1,10 @@
 .review-item {
   padding: 38px 50px;
-  display: flex !important;
+  display: flex;
   @include gap(column, 28px);
+  &.slick-slide {
+    display: flex;
+  }
   @include media(540) {
     padding: 19px 22px 30px;
     flex-direction: column;

@@ -2,6 +2,7 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   box-sizing: border-box;
+  background: $second;
   @include media(767) {
     font-size: 12px;
   }
@@ -198,6 +199,9 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
 
 .medium-text {
   @include font-settings(16, 19);
+  & > * {
+    @include font-settings(16, 19);
+  }
 }
 
 .little-text {
@@ -241,6 +245,7 @@ h4, h5, h6, .h4-title, .h5-title, .h6-title  {
   margin-right: auto;
   width: 100%;
   position: relative;
+  background: $light;
 }
 
 .main {

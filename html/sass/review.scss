@@ -1,5 +1,48 @@
 @charset "UTF-8";
 @import "base/base";
+@import "components/review-item";
+@import "components/buttons-row";
+@import "components/video";
 @import "layout/page";
+@import "layout/large-callback";
 @import "layout/about-us";
-@import "layout/review";
+
+.page-review {
+  @include min-media(1201) {
+    &:last-child {
+      padding-bottom: 137px;
+    }
+  }
+  &__inner {
+    @include media(1200) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title-wrapper {
+    @include media(1200) {
+      margin-bottom: 55px;
+    }
+    @include media(540) {
+      margin-bottom: 42px;
+    }
+  }
+  &__item {
+    &:nth-child(2n) {
+      max-width: 716px;
+    }
+    &:nth-child(2n + 1) {
+      max-width: 822px;
+    }
+    &:not(:first-child) {
+      margin-top: 27px;
+    }
+  }
+  &__button {
+    margin-top: 62px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    @include media(540) {
+      margin-top: 36px;
+    }
+  }
+}

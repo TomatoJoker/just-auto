@@ -48,4 +48,14 @@
       margin-top: 26px;
     }
   }
+  &__arrow-decor {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+  }
+  &:last-child {
+    .step__arrow-decor {
+      display: none;
+    }
+  }
 }

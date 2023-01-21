@@ -160,12 +160,25 @@ $(function ($) {
       }
     }]
   });
+  var itemVideoPage = '.js-our-work-item';
   $('.js-btn-load').hide();
   showCard(56, 1641);
   showCard(54, 1201, 1640);
   showCard(25, 1001, 1200);
   showCard(24, 541, 1000);
   showCard(10, 0, 541);
+  btnShowItem(itemVideoPage);
+  // load more for page OurWork
+
+  var itemReviewPage = '.js-review-item';
+  hideCard(3, itemReviewPage);
+  btnShowItem(itemReviewPage);
+  function btnShowItem(selectorItem) {
+    $('.js-btn-load').on('click', function () {
+      $(selectorItem).show();
+      $(this).hide();
+    });
+  }
   function showCard(itemCard, breakpointMin) {
     var breakpoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Infinity;
     if (breakpointMin < window.innerWidth && window.innerWidth < breakpoint) {
@@ -178,11 +191,12 @@ $(function ($) {
     });
   }
   function hideCard(item) {
-    if ($('.js-our-work-item').length > item) {
+    var selectorItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : itemVideoPage;
+    if ($(selectorItem).length > item) {
       $('.js-btn-load').show();
-      $('.js-our-work-item').hide();
+      $(selectorItem).hide();
       for (var _i = 1; _i <= item; _i++) {
-        $('.js-our-work-item').eq(_i - 1).show();
+        $(selectorItem).eq(_i - 1).show();
       }
     }
   }

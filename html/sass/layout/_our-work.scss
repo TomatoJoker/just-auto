@@ -12,18 +12,6 @@
     @include media(540) {
       padding-bottom: 51px;
     }
-    .card {
-      padding: 25px;
-      margin-top: 58px;
-      @include media(1200) {
-        padding-top: 43px;
-        padding-bottom: 43px;
-      }
-      @include media(540) {
-        padding: 0px;
-        background: $transparent;
-      }
-    }
   }
   &__page-heading {
     margin-bottom: 26px;
@@ -69,6 +57,18 @@
   }
   &__bottom {
     @include gap(column, 20px);
+    &.card {
+      padding: 25px;
+      margin-top: 58px;
+      @include media(1200) {
+        padding-top: 43px;
+        padding-bottom: 43px;
+      }
+      @include media(540) {
+        padding: 0px;
+        background: $transparent;
+      }
+    }
   }
   &__left {
     max-width: 907px;
