@@ -26,23 +26,25 @@ $(function ($) {
   var arrowRight = '<button data-fancybox-next="" class="fancybox-button modal__arrow modal__arrow-next">' + '   <div class="arrow">' + arrowRightSvg + '   </div>' + '</button>',
     arrowLeft = '<button data-fancybox-prev="" class="fancybox-button modal__arrow modal__arrow-prev">' + '   <div class="arrow">' + arrowLeftSvg + '   </div>' + '</button>',
     iconClose = '<button type="button" data-fancybox-close="" class="fancybox-button modal__close fancybox-close-small">' + '   <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">' + closeSvg + '   </svg>' + '</button>';
-  modal('.js-lightbox-first, .js-lightbox-second, .js-lightbox-third, .js-lightbox-fourth', 'modal__image-slide');
-  function modal(imageModal, slideClass) {
-    var close = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : iconClose;
-    var arrowRight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowRight;
-    var arrowLeft = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : arrowLeft;
+  modal('modal__image-slide');
+  function modal(slideClass) {
+    var close = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : iconClose;
+    var arrowRight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : arrowRight;
+    var arrowLeft = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowLeft;
     $('[data-fancybox]').fancybox({
       smallBtn: false,
       toolbar: false
     });
-    $(imageModal).fancybox({
-      slideClass: slideClass,
-      btnTpl: {
-        arrowRight: arrowRight,
-        arrowLeft: arrowLeft,
-        smallBtn: close
-      },
-      smallBtn: true
+    $('.js-lightbox-wrapper').each(function () {
+      $(this).find('.js-lightbox').fancybox({
+        slideClass: slideClass,
+        btnTpl: {
+          arrowRight: arrowRight,
+          arrowLeft: arrowLeft,
+          smallBtn: close
+        },
+        smallBtn: true
+      });
     });
   }
   $('.js-video-preview').on('click', function () {
@@ -173,12 +175,14 @@ $(function ($) {
   var itemReviewPage = '.js-review-item';
   hideCard(3, itemReviewPage);
   btnShowItem(itemReviewPage);
+  // load more for review page
+
   function btnShowItem(selectorItem) {
     $('.js-btn-load').on('click', function () {
       $(selectorItem).show();
       $(this).hide();
     });
-  }
+  } // hide btn if small item
   function showCard(itemCard, breakpointMin) {
     var breakpoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Infinity;
     if (breakpointMin < window.innerWidth && window.innerWidth < breakpoint) {
@@ -189,7 +193,7 @@ $(function ($) {
         hideCard(itemCard);
       }
     });
-  }
+  } // media function for set breakpoint and item
   function hideCard(item) {
     var selectorItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : itemVideoPage;
     if ($(selectorItem).length > item) {
@@ -199,5 +203,9 @@ $(function ($) {
         $(selectorItem).eq(_i - 1).show();
       }
     }
-  }
+  } // hide item and show btn if many item
+
+  $('.js-accordion-btn').on('click', function () {
+    $(this).closest('.js-accordion').toggleClass('is-open').find('.js-accordion-item').slideToggle(speed * 0.90);
+  });
 });

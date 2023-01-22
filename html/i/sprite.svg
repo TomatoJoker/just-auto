@@ -51,5 +51,8 @@
         <symbol id="icon-arrow-close" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
             <path xmlns="http://www.w3.org/2000/svg" d="M9.57373 24.4276L17.0013 17M24.4289 9.57239L16.9999 17M16.9999 17L9.57373 9.57239M17.0013 17L24.4289 24.4276" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+        <svg id="icon-crown" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.334 25.3342H2.66731V28.0008H29.334V25.3342ZM29.334 6.66748L22.6673 10.6675L16.0006 2.66748L9.33398 10.6675L2.66731 6.66748V22.6675H29.334V6.66748Z"/>
+        </svg>
     </defs>
 </svg>

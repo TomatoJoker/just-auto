@@ -10,5 +10,5 @@ function pageWidget(pages) {
   widgetStilization.prependTo(".widget_wrap");
 }
 $(function () {
-  pageWidget(['index', 'our-work', 'review', 'contact', 'trucks', 'thanks', '404', 'privacy']);
+  pageWidget(['index', 'our-work', 'review', 'contact', 'trucks', 'calculator', 'thanks', '404', 'privacy']);
 });

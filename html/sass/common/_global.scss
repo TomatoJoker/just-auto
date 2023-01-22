@@ -60,7 +60,7 @@ a {
     position: relative;
     @include hover-focus {
       &:before {
-        transform: scale(0);
+        transform: scaleX(0);
       }
     }
     &:before {
@@ -73,7 +73,7 @@ a {
       height: 1px;
       background: currentColor;
       transition: inherit;
-      transform: scale(1);
+      transform: scaleX(1);
     }
   }
 
