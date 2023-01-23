@@ -212,9 +212,12 @@
         }
         .icon,
         &:after {
-          transform: translateY(3px);
+          transform: translateY(1px);
           @include transition;
           position: static;
+        }
+        &:after {
+          border-top: 5px solid;
         }
       }
       &__link,
