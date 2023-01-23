@@ -76,37 +76,39 @@ $(function ($) {
     speed = getSpeed.slice(0, getSpeed.length - 2);
   // console.log(speed);
   // console.log(typeof timeFunction);
-  $(heroSlider).slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-    initialSlide: startSlide - 1,
-    asNavFor: counter,
-    appendArrows: $(dotsContainer),
-    appendDots: $(dotsContainer),
-    dots: true,
-    dotsClass: 'dots__block',
-    swipe: false,
-    speed: speed * 1.3,
-    cssEase: timeFunction,
-    prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
-    nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
-    waitForAnimate: false,
-    accessibility: false
-  });
-  $(counter).slick({
-    vertical: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    initialSlide: startSlide - 1,
-    swipe: false,
-    touchMove: false,
-    accessibility: false
-  });
-  counterClick(counter);
-  counterClick(heroSlider);
+  if ($(heroSlider).length) {
+    $(heroSlider).slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: true,
+      initialSlide: startSlide - 1,
+      asNavFor: counter,
+      appendArrows: $(dotsContainer),
+      appendDots: $(dotsContainer),
+      dots: true,
+      dotsClass: 'dots__block',
+      swipe: false,
+      speed: speed * 1.3,
+      cssEase: timeFunction,
+      prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
+      nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
+      waitForAnimate: false,
+      accessibility: false
+    });
+    $(counter).slick({
+      vertical: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      initialSlide: startSlide - 1,
+      swipe: false,
+      touchMove: false,
+      accessibility: false
+    });
+    counterClick(counter);
+    counterClick(heroSlider);
+  }
   function counterClick(slider) {
     var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : counterItem;
     $("".concat(el)).on("click", function () {
@@ -116,52 +118,98 @@ $(function ($) {
       $(counterItem).eq(index).addClass('slick-current');
     });
   }
-  $('.js-slide-free').slick({
-    infinite: true,
-    swipeToSlide: true,
-    slidesToShow: 7,
-    variableWidth: true,
-    waitForAnimate: false,
-    accessibility: true,
-    speed: speed * 1.3,
-    cssEase: timeFunction,
-    // initialSlide: Math.round(centerSlide),
-    rows: 2,
-    slideToShow: 8,
-    arrows: false
-  });
-  // let centerSlide = ($('.js-slide-free').find('.slick-slide:not(.slick-clone)').length) / 2;
+  var sliderFree = '.js-slide-free';
+  if ($(sliderFree).length) {
+    $(sliderFree).slick({
+      infinite: true,
+      swipeToSlide: true,
+      slidesToShow: 7,
+      variableWidth: true,
+      waitForAnimate: false,
+      accessibility: true,
+      speed: speed * 1.3,
+      cssEase: timeFunction,
+      // initialSlide: Math.round(centerSlide),
+      rows: 2,
+      slideToShow: 8,
+      arrows: false
+    });
+    // let centerSlide = ($('.js-slide-free').find('.slick-slide:not(.slick-clone)').length) / 2;
+  }
 
-  $('.js-slider-review').slick({
-    slidesToShow: 2,
-    prevArrow: '<button class="review__arrow review__arrow-left" type="button">' + arrowLeftSvg + '</button>',
-    nextArrow: '<button class="review__arrow review__arrow-right" type="button">' + arrowRightSvg + '</button>',
-    responsive: [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-  });
-  $('.js-slider-video').slick({
-    infinite: false,
-    dotsClass: 'dots__block',
-    speed: speed * 1.3,
-    cssEase: timeFunction,
-    slidesToShow: 2,
-    arrows: true,
-    appendArrows: $('.js-video-dots'),
-    appendDots: $('.js-video-dots'),
-    prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
-    nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
-    dots: true,
-    responsive: [{
-      breakpoint: 540,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-  });
+  var sliderReview = '.js-slider-review',
+    sliderVideo = '.js-slider-video';
+  if ($(sliderReview).length) {
+    $(sliderReview).slick({
+      slidesToShow: 2,
+      speed: speed * 1.3,
+      cssEase: timeFunction,
+      waitForAnimate: false,
+      prevArrow: '<button class="review__arrow review__arrow-left" type="button">' + arrowLeftSvg + '</button>',
+      nextArrow: '<button class="review__arrow review__arrow-right" type="button">' + arrowRightSvg + '</button>',
+      responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
+  if ($(sliderVideo).length) {
+    $(sliderVideo).slick({
+      infinite: false,
+      dotsClass: 'dots__block',
+      waitForAnimate: false,
+      speed: speed * 1.3,
+      cssEase: timeFunction,
+      slidesToShow: 2,
+      arrows: true,
+      appendArrows: $('.js-video-dots'),
+      appendDots: $('.js-video-dots'),
+      prevArrow: '<button type="button" class="dots__arrow dots__arrow-left">' + arrowLeftSvg + '</button>',
+      nextArrow: '<button type="button" class="dots__arrow dots__arrow-right">' + arrowRightSvg + '</button>',
+      dots: true,
+      responsive: [{
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
+  var sliderVideoWork = '.js-slider-video-our-work';
+  if ($(sliderVideoWork).length) {
+    $(sliderVideoWork).slick({
+      slidesToShow: 6,
+      waitForAnimate: false,
+      speed: speed * 1.3,
+      cssEase: timeFunction,
+      infinite: false,
+      arrows: false,
+      swipeToSlide: true,
+      responsive: [{
+        breakpoint: 1640,
+        settings: {
+          slidesToShow: 5.3
+        }
+      }, {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4.3
+        }
+      }, {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2.4
+        }
+      }, {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1.6
+        }
+      }]
+    });
+  }
   var itemVideoPage = '.js-our-work-item';
   $('.js-btn-load').hide();
   showCard(56, 1641);

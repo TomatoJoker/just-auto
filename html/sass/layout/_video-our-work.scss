@@ -1,0 +1,36 @@
+.video-our-work {
+  padding-bottom: 0px;
+  &__row {
+    .slick-list {
+      @include media(1640) {
+        overflow: visible;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 34px;
+    @include media(540) {
+      margin-bottom: 26px;
+    }
+  }
+  &__item {
+    max-width: none;
+    &:not(:last-child) {
+      margin-right: 25px;
+      @include media(1200) {
+        margin-right: 20px;
+      }
+      @include media(540) {
+        margin-right: 10px;
+      }
+    }
+    .video__preview {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 450px;
+      @include media(540) {
+        height: 290px;
+      }
+    }
+  }
+}
