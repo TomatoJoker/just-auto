@@ -31,7 +31,7 @@
   }
   &__map {
     line-height: 0px;
-    frame {
+    iframe {
       border: 0px !important;
       @include min-media(1200) {
         height: 100%;
