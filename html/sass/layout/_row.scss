@@ -16,7 +16,7 @@
     }
   }
   &__item-right-container {
-    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$site-container} - var(--gap)) / 2));
     @include min-media(1921) {
       padding-right: 0px;
       width: 783.5px;
@@ -26,7 +26,7 @@
     }
   }
   &__item-left-container {
-    padding-left: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    padding-left: calc(calc((100vw - var(--gap)) / 2) - ((#{$site-container} - var(--gap)) / 2));
     @include min-media(1921) {
       padding-left: 0px;
       width: 783.5px;
@@ -37,7 +37,7 @@
     }
   }
   &__item-right-container {
-    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$container} - var(--gap)) / 2));
+    padding-right: calc(calc((100vw - var(--gap)) / 2) - ((#{$site-container} - var(--gap)) / 2));
     @include min-media(1921) {
       padding-right: 0px;
       width: 783.5px;

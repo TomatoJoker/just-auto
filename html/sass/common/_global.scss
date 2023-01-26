@@ -17,7 +17,7 @@ a {
 }
 
 .container {
-  max-width: calc(#{$container});
+  max-width: calc(#{$site-container});
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
   width: 100%;

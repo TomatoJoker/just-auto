@@ -14,10 +14,11 @@ $time-function: ease-in-out;
 :root {
   --speed: #{$speed};
   --time-function: #{$time-function};
+  --vh: 1vh;
 }
 
 //layout
 $desktop-padding: 44px;
 $mobile-padding: 20px;
 $desktop-width: 1642px;
-$container: $desktop-width + (#{$desktop-padding * 2});
+$site-container: $desktop-width + ($desktop-padding * 2);

@@ -3,16 +3,9 @@
   margin-right: auto;
   position: relative;
   color: $light;
-  height: 880px;
+  height: calc(100 * var(--vh));
   background: $dark-light;
   margin-bottom: 60px;
-  @include media(1200) {
-    height: 1133px;
-    margin-bottom: 0%;
-  }
-  @include media(540) {
-    height: 558px;
-  }
   &__padding-top {
     padding-top: 161px;
     @include media(540) {
@@ -48,6 +41,7 @@
     z-index: 0;
     position: relative;
     width: 100%;
+    height: calc(100 * var(--vh));
     object-fit: cover;
     object-position: center;
     @include media(1200) {
@@ -214,7 +208,7 @@
   &__slider,
   &__slider .slick-list,
   &__slider .slick-track{
-    height: 100%;
+    height: calc(100 * var(--vh));
   }
   &__row {
     display: flex;

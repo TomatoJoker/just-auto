@@ -256,4 +256,16 @@ $(function ($) {
   $('.js-accordion-btn').on('click', function () {
     $(this).closest('.js-accordion').toggleClass('is-open').find('.js-accordion-item').slideToggle(speed * 0.90);
   });
+  dynamicHeightToolbar();
+  $(window).on('resize', function () {
+    dynamicHeightToolbar();
+  });
+  function dynamicHeightToolbar() {
+    if (window.innerWidth < 1200) {
+      var vh = window.innerHeight * 0.01;
+      $('html').attr('style', "--vh: ".concat(vh, "px"));
+    } else {
+      $('html').removeAttr('style');
+    }
+  } // calc toolbar mobile browser
 });

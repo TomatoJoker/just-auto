@@ -12,28 +12,6 @@
   line-height: $line-height;
 }
 
-/* FONT SourceSansPro */
-//@mixin fl {font-family: 'Rubik-Light',sans-serif;}
-//@mixin fr {font-family: 'Rubik-Regular',sans-serif;}
-//@mixin fm {font-family: 'Rubik-Medium',sans-serif;}
-//@mixin fdb {font-family: 'Rubik-SemiBold',sans-serif;}
-//@mixin fb {font-family: 'Rubik-Bold',sans-serif;}
-
-/*images*/
-
-@mixin cover {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%; }
-
-
-// vertical-align at center
-@mixin vcenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%); }
-
 /*=======================START-MEDIA=====================*/
 @mixin media($width) {
   @media only screen and (max-width: $width+ "px") {
@@ -115,22 +93,6 @@
   }
 }
 
-@mixin placeholder {
-  &::-webkit-input-placeholder { @content; }
-  &:-moz-placeholder           { @content; }
-  &::-moz-placeholder          { @content; }
-  &:-ms-input-placeholder      { @content; }
-}
-
-/* Single property transition mixin */
-$animation-speed: .3s;
-
-@mixin multi-transition($transition: $speed, $function: $time-function, $properties-list...) {
-  transition-duration: $transition;
-  transition-timing-function: $function;
-  transition-property: $properties-list;
-}
-
 @mixin size($width, $height: $width) {
   width: $width + px;
   height: $height + px;
@@ -180,20 +142,6 @@ $animation-speed: .3s;
   }
 }
 
-// hide
-@mixin none() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 // gap
 @mixin gap($property, $value) {
   @if $property == column {
@@ -237,16 +185,6 @@ $animation-speed: .3s;
   }
 }
 
-// supports
-@mixin supports($property, $value) {
-  @supports ($property: $value) {
-    #{$property}: $value;
-  }
-  @supports not ($property: $value) {
-    @content;
-  }
-}
-
 // grid
 @mixin grid-col($column) {
   &__col-#{$column} {
@@ -267,69 +205,3 @@ $animation-speed: .3s;
   max-height: $height;
   overflow: hidden;
 }
-
-//@mixin gap($value-column, $value-row: $value-column) {
-//  @if $value-row == 0 {
-//    & {
-//      margin-right: calc( 0px - (#{$value-column} / 2));
-//      margin-left: calc( 0px - (#{$value-column} / 2));
-//    }
-//    & > * {
-//      margin-right: calc(#{$value-column} / 2);
-//      margin-left: calc(#{$value-column} / 2);
-//    }
-//  }
-//  @else if $value-column == 0 {
-//    & {
-//      margin-top: -$value-row;
-//    }
-//    & > * {
-//      margin-top: $value-row;
-//    }
-//  }
-//  @else {
-//    & {
-//      margin-left: calc(0px - #{$value-column} / 2);
-//      margin-right: calc(0px - #{$value-column} / 2);
-//      margin-top: -$value-row;
-//    }
-//    & > * {
-//      margin-left: calc(#{$value-column} / 2);
-//      margin-right: calc(#{$value-column} / 2);
-//      margin-top: $value-row;
-//    }
-//  }
-//}
-
-@function decimal-round($number, $digits: 0, $mode: round) {
-  $n: 1;
-  // $number must be a number
-  @if type-of($number) != number {
-    @warn '#{ $number } is not a number.';
-    @return $number;
-  }
-  // $digits must be a unitless number
-  @if type-of($digits) != number {
-    @warn '#{ $digits } is not a number.';
-    @return $number;
-  } @else if not unitless($digits) {
-    @warn '#{ $digits } has a unit.';
-    @return $number;
-  }
-  @if $digits > 0 {
-    @for $i from 1 through $digits {
-      $n: $n * 10;
-    }
-  }
-  @if $mode == round {
-    @return round($number * $n) / $n;
-  } @else if $mode == ceil {
-    @return ceil($number * $n) / $n;
-  } @else if $mode == floor {
-    @return floor($number * $n) / $n;
-  } @else {
-    @warn '#{ $mode } is undefined keyword.';
-    @return $number;
-  }
-}
-
