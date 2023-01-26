@@ -7,13 +7,19 @@
   background: $dark-light;
   margin-bottom: 60px;
   &__padding-top {
-    padding-top: 161px;
+    padding-top: 8.45%;
+    @include media(1200) {
+      padding-top: 161px;
+    }
     @include media(540) {
       padding-top: 89px;
     }
   }
   &__padding-bottom {
-    padding-bottom: 88px;
+    padding-bottom: 4.6%;
+    @include media(1200) {
+      padding-bottom: 88px;
+    }
     @include media(540) {
       padding-bottom: 73px;
     }
@@ -274,8 +280,11 @@
   }
   &__dots-wrapper {
     position: absolute;
-    bottom: 45px;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
+    @include media(1200) {
+      bottom: 45px;
+    }
   }
 }
