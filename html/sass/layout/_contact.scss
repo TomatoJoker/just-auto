@@ -33,6 +33,9 @@
     line-height: 0px;
     frame {
       border: 0px !important;
+      @include min-media(1200) {
+        height: 100%;
+      }
     }
     @include media(1200) {
       padding: 0px;
