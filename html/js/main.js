@@ -29,8 +29,8 @@ $(function ($) {
   modal('modal__image-slide');
   function modal(slideClass) {
     var close = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : iconClose;
-    var arrowRight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : arrowRight;
-    var arrowLeft = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowLeft;
+    var modalArrowRight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : arrowRight;
+    var modalArrowLeft = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : arrowLeft;
     $('[data-fancybox]').fancybox({
       smallBtn: false,
       toolbar: false
@@ -39,8 +39,8 @@ $(function ($) {
       $(this).find('.js-lightbox').fancybox({
         slideClass: slideClass,
         btnTpl: {
-          arrowRight: arrowRight,
-          arrowLeft: arrowLeft,
+          arrowRight: modalArrowRight,
+          arrowLeft: modalArrowLeft,
           smallBtn: close
         },
         smallBtn: true
